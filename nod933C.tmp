@@ -1,0 +1,178 @@
+[gd_scene load_steps=7 format=3 uid="uid://b524s0bjjh1sk"]
+
+[ext_resource type="Script" path="res://grid_container.gd" id="1_byxcb"]
+[ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://rsc/img/main_background.png" id="1_qruxa"]
+[ext_resource type="Texture2D" uid="uid://bb3nu7scicd8o" path="res://rsc/img/hand.png" id="2_kkjwc"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="3_2u571"]
+[ext_resource type="Texture2D" uid="uid://bgr8o5diwl516" path="res://rsc/img/watch_background.png" id="3_cuv7l"]
+[ext_resource type="AudioStream" uid="uid://ccdkbnmd7ntnj" path="res://audio/voicebot1_main/GP_opening.mp3" id="3_i0mts"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = 288.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qruxa")
+
+[node name="Hand" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = 288.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kkjwc")
+
+[node name="WatchBG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = 288.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cuv7l")
+
+[node name="GridContainer" type="GridContainer" parent="WatchBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.381
+anchor_top = 0.492
+anchor_right = 0.535
+anchor_bottom = 0.737
+offset_left = 0.631958
+offset_top = -0.223999
+offset_right = -0.480042
+offset_bottom = -0.364075
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2u571")
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 1
+columns = 3
+script = ExtResource("1_byxcb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="WatchBG/GridContainer"]
+stream = ExtResource("3_i0mts")
+
+[node name="BeepPlayer" type="AudioStreamPlayer" parent="WatchBG/GridContainer"]
+
+[node name="Button1" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+text = "1"
+
+[node name="Button2" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2"
+
+[node name="Button3" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "3"
+
+[node name="Button4" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "4"
+
+[node name="Button5" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "5"
+
+[node name="Button6" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "6"
+
+[node name="Button7" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "7"
+
+[node name="Button8" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "8"
+
+[node name="Button9" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "9"
+
+[node name="ButtonHash" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "#"
+
+[node name="Button0" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+
+[node name="ButtonAst" type="Button" parent="WatchBG/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 4
+theme_override_constants/h_separation = 7
+theme_override_constants/icon_max_width = 6
+theme_override_constants/align_to_largest_stylebox = 7
+text = "*"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="WatchBG"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+value = 100.0
+
+[node name="CurNum" type="Label" parent="WatchBG"]
+layout_mode = 2
+anchor_left = 0.458
+anchor_top = 0.5
+anchor_right = 0.458
+anchor_bottom = 0.5
+offset_left = -133.424
+offset_top = -74.0
+offset_right = 130.576
+offset_bottom = -40.0
+theme = ExtResource("3_2u571")
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1

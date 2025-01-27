@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://gigljbrx6307"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_bem6t"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_eyc6t"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bem6t")
+script = ExtResource("2_eyc6t")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="Title" type="Label" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.065
+anchor_right = 0.498
+anchor_bottom = 0.065
+offset_left = -470.696
+offset_top = -0.120003
+offset_right = 471.304
+offset_bottom = 185.88
+theme = ExtResource("1_bem6t")
+theme_override_colors/font_color = Color(0.572549, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Botting Alive"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.469
+anchor_right = 0.5
+anchor_bottom = 0.469
+offset_left = -135.0
+offset_top = 0.0879822
+offset_right = 135.0
+offset_bottom = 244.088
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+text = "PLAY"
+
+[node name="TutorialBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+text = "TUTORIAL"
+
+[node name="SettingsBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="QuitBtn" type="Button" parent="Background/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="pressed" from="Background/VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
