@@ -9,7 +9,7 @@ var can_proceed = false
 var dial_sequence = []
 var target_length = 10
 var target_sequence = [8, 8, 8, 6, 6, 0, 5, 8, 1, 0]
-#var target_sequence = [ 5, 8, 9, 0]
+
 var current_directory_path = "res://audio/voicebot1_main/"  # Start path
 var folder_structure = {}
 var current_node_array = []
@@ -17,14 +17,6 @@ var current_node_array = []
 func _ready():
 	#Set Number Dialing to nothing
 	dialing_num.text = ""
-	
-	#var font_size = 24  # Desired font size
-	
-	#for button in self.get_children():
-	#	if button is Button:
-	#		button.set_custom_minimum_size(Vector2(100, 100))
-	
-	# Initialize the audio players and add them to the tree
 	
 	var root_path = "res://audio/voicebot1_main"
 	folder_structure = read_directory_structure(root_path) # update golable folder_structure

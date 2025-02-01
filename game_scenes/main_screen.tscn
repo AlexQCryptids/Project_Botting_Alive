@@ -1,0 +1,136 @@
+[gd_scene load_steps=12 format=3 uid="uid://dnm4hropusdvo"]
+
+[ext_resource type="Script" path="res://scripts/main_game.gd" id="1_3aurv"]
+[ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://rsc/img/main_background.png" id="1_pi3nr"]
+[ext_resource type="Texture2D" uid="uid://bb3nu7scicd8o" path="res://rsc/img/hand.png" id="2_u76l4"]
+[ext_resource type="Texture2D" uid="uid://b2kl88g22sefx" path="res://rsc/img/watch_overlay.png" id="3_6j81m"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="4_fgoog"]
+[ext_resource type="Script" path="res://scripts/watch_ui.gd" id="5_jf44g"]
+[ext_resource type="Script" path="res://scripts/timers.gd" id="5_k45j3"]
+[ext_resource type="Texture2D" uid="uid://82qpk3fkapn7" path="res://rsc/img/watch_battery_empty.png" id="6_bvfv6"]
+[ext_resource type="Texture2D" uid="uid://cqgmjcvsesi3l" path="res://rsc/img/watch_battery_full.png" id="7_jxf74"]
+[ext_resource type="PackedScene" uid="uid://bhw77tm8ci538" path="res://game_scenes/watch_screen_apps.tscn" id="8_7c6mh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3aurv")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pi3nr")
+
+[node name="Hand" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u76l4")
+
+[node name="WatchOverlay" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = 288.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6j81m")
+
+[node name="Main" type="Control" parent="WatchOverlay"]
+layout_mode = 1
+anchor_left = 0.363
+anchor_top = 0.351
+anchor_right = 0.554
+anchor_bottom = 0.756
+offset_left = -3.26404
+offset_top = -0.171997
+offset_right = -0.312012
+offset_bottom = 0.16803
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="WatchOverlay/Main"]
+custom_minimum_size = Vector2(330, 385)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_fgoog")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WatchOverlay/Main/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UIBG" type="Panel" parent="WatchOverlay/Main/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(330, 40)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nmlg0")
+
+[node name="UI" type="HBoxContainer" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG"]
+custom_minimum_size = Vector2(310, 40)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_jf44g")
+
+[node name="Time" type="Label" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG/UI"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "00:00"
+
+[node name="Battery" type="TextureProgressBar" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG/UI"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 5.0
+value = 5.0
+fill_mode = 1
+texture_under = ExtResource("6_bvfv6")
+texture_progress = ExtResource("7_jxf74")
+
+[node name="Screen" type="Control" parent="WatchOverlay/Main/Panel/VBoxContainer" groups=["SceneLoader"]]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AppScreen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("8_7c6mh")]
+layout_mode = 1
+
+[node name="Timers" type="Node" parent="."]
+script = ExtResource("5_k45j3")
+
+[node name="MinTimer" type="Timer" parent="Timers"]
+autostart = true
+
+[connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]
