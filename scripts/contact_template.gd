@@ -10,6 +10,8 @@ extends Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
 	contact_name.text = cont_name #Set Contact Name
 	
 	#Set Contact Number
@@ -18,10 +20,12 @@ func _ready() -> void:
 		number+= str(i)
 	contact_number.text = number
 	
-		
-	#contact_icon.texture = cont_icon
+	if cont_icon != null:
+		contact_icon.texture = cont_icon
+
 
 
 func _on_pressed() -> void:
-	Global.last_scene = "res://game_scenes/watch_screen_contacts.tscn"
-	Global.change_scene("res://game_scenes/dial_screen.tscn")
+	$AudioStreamPlayer.play()
+	Global.set_current_call(contact_number.text,cont_num)
+	Global.swap_scene("res://game_scenes/watch_screen_contacts.tscn","res://game_scenes/watch_screen_calling.tscn")

@@ -12,5 +12,4 @@ func _ready() -> void:
 	label.text = app_name #Set App Name
 
 func _on_button_pressed() -> void:
-	Global.last_scene = "res://game_scenes/watch_screen_apps.tscn"
-	Global.change_scene(scene)
+	Global.swap_scene("res://game_scenes/watch_screen_apps.tscn",scene)

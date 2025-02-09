@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d300ur3y3xpnu"]
+[gd_scene load_steps=6 format=3 uid="uid://d300ur3y3xpnu"]
 
 [ext_resource type="PackedScene" uid="uid://dt4yum48xch12" path="res://templates/contact_template.tscn" id="1_5f8wy"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_8dynd"]
+[ext_resource type="Script" path="res://scripts/contacts_screen.gd" id="2_umjar"]
+[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="3_mvppg"]
+[ext_resource type="Texture2D" uid="uid://cmqey4q0f2o36" path="res://rsc/img/dial_icon.png" id="4_cl1vn"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -13,7 +16,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_8dynd")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="ContactsContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,81 +24,65 @@ anchor_bottom = 1.0
 offset_left = 11.0
 grow_horizontal = 2
 grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("2_umjar")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ContactsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="Panel" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="GeorgiaPower" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Georgia Power"
 cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+cont_icon = ExtResource("3_mvppg")
 
-[node name="Panel2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+icon = ExtResource("3_mvppg")
+cont_name = "Bank"
+cont_num = Array[int]([4, 0, 4, 7, 4, 3, 2, 7, 4, 0])
 
-[node name="Panel3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+icon = ExtResource("3_mvppg")
+cont_name = "Hospital"
+cont_num = Array[int]([8, 7, 4, 0, 0, 3, 1, 2, 2, 4])
 
-[node name="Panel4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="Restaurant" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+icon = ExtResource("3_mvppg")
+cont_name = "La Hacienda"
+cont_num = Array[int]([0, 7, 0, 3, 5, 8, 1, 6, 5, 4])
 
-[node name="Panel5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+[node name="DialButton" type="Button" parent="."]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+icon = ExtResource("4_cl1vn")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="Panel6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
-
-[node name="Panel7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
-
-[node name="Panel8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
-
-[node name="Panel9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
+[connection signal="pressed" from="DialButton" to="ContactsContainer" method="_on_dial_button_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn0i4kmcd1g5i"]
+
+[ext_resource type="Script" path="res://bots/bot_scripts/georgiapower_bot.gd" id="1_0ruj1"]
+
+[node name="GeorgiaPowerBot" type="AudioStreamPlayer"]
+script = ExtResource("1_0ruj1")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Botting Alive"
 run/main_scene="res://ui_scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
@@ -18,3 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/global.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://rsc/img/mouse_icon2.png"
