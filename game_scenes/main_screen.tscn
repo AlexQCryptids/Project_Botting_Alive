@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=14 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://rsc/img/main_background.png" id="1_pi3nr"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cqgmjcvsesi3l" path="res://rsc/img/watch_battery_full.png" id="7_jxf74"]
 [ext_resource type="PackedScene" uid="uid://bhw77tm8ci538" path="res://game_scenes/watch_screen_apps.tscn" id="9_lsoir"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://rsc/img/light1.png" id="10_3tfo2"]
+[ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://rsc/img/watch_knob.png" id="10_rfeen"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)
@@ -57,6 +58,22 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_6j81m")
 expand_mode = 1
+
+[node name="BackButton" type="Button" parent="WatchOverlay"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.562
+anchor_top = 0.55
+anchor_right = 0.562
+anchor_bottom = 0.55
+offset_left = 0.773926
+offset_top = -40.3
+offset_right = 25.7739
+offset_bottom = 40.7
+icon = ExtResource("10_rfeen")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Main" type="Control" parent="WatchOverlay"]
 layout_mode = 1
@@ -131,6 +148,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="AppScreen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_lsoir")]
+visible = false
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]

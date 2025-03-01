@@ -23,3 +23,7 @@ Global="*res://scripts/global.gd"
 
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://rsc/img/mouse_icon2.png"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
