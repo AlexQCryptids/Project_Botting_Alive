@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://1s0li8bogwi0"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_a3kut"]
+[ext_resource type="PackedScene" uid="uid://dm6c4ebqlkghn" path="res://templates/text_contact_template.tscn" id="2_j1dbu"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_a3kut")
+
+[node name="ContactsContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContactsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="TextContactTemplate" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate2" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate3" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate4" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate5" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate6" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate7" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate8" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+
+[node name="TextContactTemplate9" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2

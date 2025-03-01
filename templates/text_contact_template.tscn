@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm6c4ebqlkghn"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_pnq1t"]
+[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="2_tto2h"]
+[ext_resource type="AudioStream" uid="uid://c4toshyagn4mt" path="res://audio/clickSound.wav" id="3_47c34"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pelo5"]
+bg_color = Color(0.00133447, 0.0657473, 0.126114, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="TextContactTemplate" type="Button"]
+custom_minimum_size = Vector2(0, 75)
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -1.0
+offset_bottom = 75.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+flat = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_pnq1t")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pelo5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContactIcon" type="TextureRect" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_tto2h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 4.0
+
+[node name="ContactName" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Contact Name"
+
+[node name="LastMessage" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Lorem ipsum doloriuhhggg"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_47c34")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

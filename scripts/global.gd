@@ -12,6 +12,7 @@ var cur_num_seq = []
 var all_bots = {"4047432740":"res://bots/bank_bot.tscn",
 				"8886605810":"res://bots/georgia_power_bot.tscn"}
 
+
 func change_scene(scene:String):
 	var scene_load = load(scene)
 	
@@ -28,5 +29,5 @@ func set_current_call(num_str:String,num_seq:Array):
 	cur_num = num_str
 	cur_num_seq = num_seq
 
-	
+
 	

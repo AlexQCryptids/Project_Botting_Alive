@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://scripts/timers.gd" id="5_k45j3"]
 [ext_resource type="Texture2D" uid="uid://82qpk3fkapn7" path="res://rsc/img/watch_battery_empty.png" id="6_bvfv6"]
 [ext_resource type="Texture2D" uid="uid://cqgmjcvsesi3l" path="res://rsc/img/watch_battery_full.png" id="7_jxf74"]
-[ext_resource type="PackedScene" uid="uid://daqgp3nlba1oi" path="res://game_scenes/watch_screen_dialing.tscn" id="9_pmnkp"]
+[ext_resource type="PackedScene" uid="uid://bhw77tm8ci538" path="res://game_scenes/watch_screen_apps.tscn" id="9_lsoir"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://rsc/img/light1.png" id="10_3tfo2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
@@ -130,7 +130,7 @@ texture_progress = ExtResource("7_jxf74")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Screen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_pmnkp")]
+[node name="AppScreen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_lsoir")]
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
