@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm6c4ebqlkghn"]
+[gd_scene load_steps=6 format=3 uid="uid://dm6c4ebqlkghn"]
 
+[ext_resource type="Script" path="res://scripts/text_contact_template.gd" id="1_1ghwi"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_pnq1t"]
 [ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="2_tto2h"]
 [ext_resource type="AudioStream" uid="uid://c4toshyagn4mt" path="res://audio/clickSound.wav" id="3_47c34"]
@@ -26,6 +27,7 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 flat = true
+script = ExtResource("1_1ghwi")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
