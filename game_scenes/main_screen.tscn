@@ -71,6 +71,7 @@ offset_left = 0.773926
 offset_top = -40.3
 offset_right = 25.7739
 offset_bottom = 40.7
+mouse_filter = 1
 icon = ExtResource("10_rfeen")
 flat = true
 icon_alignment = 1
