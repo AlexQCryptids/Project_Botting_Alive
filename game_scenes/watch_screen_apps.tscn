@@ -28,10 +28,10 @@ grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 0
 
-[node name="AppContainer" type="GridContainer" parent="ScrollContainer"]
+[node name="AppContainer" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-columns = 4
+size_flags_horizontal = 2
+size_flags_vertical = 3
 
 [node name="PhoneApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
 layout_mode = 2
