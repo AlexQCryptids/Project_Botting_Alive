@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("4_fgoog")
 script = ExtResource("1_3aurv")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -148,7 +149,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="AppScreen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_lsoir")]
-visible = false
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -173,4 +173,5 @@ script = ExtResource("5_k45j3")
 [node name="MinTimer" type="Timer" parent="Timers"]
 autostart = true
 
+[connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]
