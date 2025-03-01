@@ -18,4 +18,5 @@ func  _input(event: InputEvent):
 
 
 func _on_back_button_pressed() -> void:
-	back()
+	if len(Global.last_scene) > 1:
+		back()

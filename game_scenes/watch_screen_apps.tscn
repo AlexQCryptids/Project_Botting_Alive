@@ -59,3 +59,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 app_name = "Gallery"
 app_icon = ExtResource("4_xrxnt")
+
+[node name="SettingsApp2" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Gallery"
+app_icon = ExtResource("4_xrxnt")
