@@ -81,7 +81,7 @@ func _on_line_edit_text_changed(new_text: String) -> void:
 
 func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
 	var new_text = $Panel/VBoxContainer/LineEdit.text
-	if new_text == "0205":
+	if new_text == "0305":
 		$Panel.visible = false
 		cur_img = images[0]
 		cur_index = 0
