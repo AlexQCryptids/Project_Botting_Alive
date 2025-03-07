@@ -65,7 +65,6 @@ text = "Contact Name"
 [node name="LastMessage" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "No Message History"
 clip_text = true
 text_overrun_behavior = 3
 

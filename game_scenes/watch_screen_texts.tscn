@@ -39,6 +39,7 @@ cont_name = "Mom"
 
 [node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+scene = "res://texts/text_scenes/BethText.tscn"
 cont_name = "Beth"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
