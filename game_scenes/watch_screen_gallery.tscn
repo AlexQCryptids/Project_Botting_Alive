@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://qx6d6vvkcx70"]
+
+[ext_resource type="Script" path="res://scripts/gallery.gd" id="1_a1s4g"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_js4hf"]
+[ext_resource type="Texture2D" uid="uid://c6h107ugrt2vw" path="res://rsc/img/contact_icon_custom.png" id="2_fa66i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8tei"]
+bg_color = Color(0.894922, 0.894922, 0.894922, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.158472, 0.158472, 0.158472, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.215902, 0.215902, 0.215902, 0.509804)
+shadow_size = 8
+
+[node name="GalleryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_js4hf")
+script = ExtResource("1_a1s4g")
+images = Array[Texture2D]([ExtResource("2_fa66i"), ExtResource("2_fa66i"), ExtResource("2_fa66i"), ExtResource("2_fa66i"), ExtResource("2_fa66i"), ExtResource("2_fa66i")])
+info = Array[String](["12/24 11:59 am", "12/24 11:59 pm", "10/24 11:29 am", "08/24 11:11 am", "11/23 01:52 pm", "01/23 10:09 am"])
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="View" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8tei")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="View"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ViewImg" type="TextureRect" parent="View/VBoxContainer"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_fa66i")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="View/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.295235, 0.292237, 0.321379, 1)
+text = "12/24 11:59 am"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="View" to="." method="_on_view_mouse_entered"]
+[connection signal="mouse_exited" from="View" to="." method="_on_view_mouse_exited"]

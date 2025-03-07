@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d300ur3y3xpnu"]
+[gd_scene load_steps=4 format=3 uid="uid://d300ur3y3xpnu"]
 
 [ext_resource type="PackedScene" uid="uid://dt4yum48xch12" path="res://templates/contact_template.tscn" id="1_5f8wy"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_8dynd"]
 [ext_resource type="Script" path="res://scripts/contacts_screen.gd" id="2_umjar"]
-[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="3_mvppg"]
-[ext_resource type="Texture2D" uid="uid://cmqey4q0f2o36" path="res://rsc/img/dial_icon.png" id="4_cl1vn"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -22,6 +20,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 11.0
+offset_right = -13.0
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
@@ -35,54 +34,68 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="GeorgiaPower" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-cont_name = "Georgia Power"
-cont_num = Array[int]([8, 8, 8, 6, 6, 0, 5, 8, 1, 0])
-cont_icon = ExtResource("3_mvppg")
+cont_name = "Mom"
+number = "6780012578"
 
-[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+[node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-icon = ExtResource("3_mvppg")
-cont_name = "Bank"
-cont_num = Array[int]([4, 0, 4, 7, 4, 3, 2, 7, 4, 0])
-
-[node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
-custom_minimum_size = Vector2(300, 75)
-layout_mode = 2
-size_flags_horizontal = 1
-size_flags_vertical = 4
-icon = ExtResource("3_mvppg")
-cont_name = "Hospital"
-cont_num = Array[int]([8, 7, 4, 0, 0, 3, 1, 2, 2, 4])
+cont_name = "Collin"
+number = "6782216704"
 
 [node name="Restaurant" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
-icon = ExtResource("3_mvppg")
-cont_name = "La Hacienda"
-cont_num = Array[int]([0, 7, 0, 3, 5, 8, 1, 6, 5, 4])
+cont_name = "Abondi's"
+number = "0703581654"
+callable = true
 
-[node name="DialButton" type="Button" parent="."]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -8.0
-offset_bottom = 8.0
-grow_horizontal = 0
-icon = ExtResource("4_cl1vn")
-flat = true
-icon_alignment = 1
-expand_icon = true
+[node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Beth"
+number = "4408755218"
 
-[connection signal="pressed" from="DialButton" to="ContactsContainer" method="_on_dial_button_pressed"]
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Well's Fargo"
+number = "4047432740"
+callable = true
+
+[node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Dad"
+number = "6786315277"
+
+[node name="GeorgiaPower" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Georgia Power"
+number = "8886605810"
+
+[node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("1_5f8wy")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Hospital"
+number = "8740031224"

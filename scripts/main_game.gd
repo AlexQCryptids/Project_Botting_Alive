@@ -15,8 +15,7 @@ func  _input(event: InputEvent):
 		$PointLight2D.position = get_local_mouse_position()
 
 
-
-
 func _on_back_button_pressed() -> void:
+	$SFX.play()
 	if len(Global.last_scene) > 1:
 		back()

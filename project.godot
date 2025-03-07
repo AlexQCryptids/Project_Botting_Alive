@@ -13,7 +13,8 @@ config_version=5
 config/name="Botting Alive"
 run/main_scene="res://ui_scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://rsc/BG_img1.png"
+config/icon="res://rsc/GameIcon.png"
 
 [autoload]
 
@@ -22,7 +23,7 @@ Global="*res://scripts/global.gd"
 [display]
 
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://rsc/img/mouse_icon2.png"
+mouse_cursor/custom_image="res://rsc/img/mouse_icon4.png"
 
 [rendering]
 

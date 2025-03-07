@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhw77tm8ci538"]
+
+[ext_resource type="PackedScene" uid="uid://bghsy8awf8hqb" path="res://templates/app_template.tscn" id="1_f32o8"]
+[ext_resource type="Texture2D" uid="uid://qe4kva7ciso0" path="res://rsc/img/watch_call_btn.png" id="2_pdya5"]
+[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="3_5bbnx"]
+[ext_resource type="Texture2D" uid="uid://cb0tfww2c0bay" path="res://rsc/img/text_sprite.png" id="4_ww7s5"]
+[ext_resource type="Texture2D" uid="uid://c0ba0byodyytf" path="res://rsc/img/watch_dial_screen_bg.png" id="4_xrxnt"]
+
+[node name="AppScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -8.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="AppContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PhoneApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Phone"
+app_icon = ExtResource("2_pdya5")
+scene = "res://game_scenes/watch_screen_dialing.tscn"
+
+[node name="ContactApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Contacts"
+app_icon = ExtResource("3_5bbnx")
+scene = "res://game_scenes/watch_screen_contacts.tscn"
+
+[node name="MessagesApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Messages"
+app_icon = ExtResource("4_ww7s5")
+scene = "res://game_scenes/watch_screen_texts.tscn"
+
+[node name="GalleryApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Gallery"
+app_icon = ExtResource("4_xrxnt")
+scene = null
+
+[node name="SettingsApp2" parent="ScrollContainer/AppContainer" instance=ExtResource("1_f32o8")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Gallery"
+app_icon = ExtResource("4_xrxnt")
+scene = null

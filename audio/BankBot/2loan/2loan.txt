@@ -1,6 +1,0 @@
-Accessing loan data, by wait on standby…
-
-Your current loans are the following:
-
-$7,235 Auto Loan on something
-$12,435 Downpayment on something else

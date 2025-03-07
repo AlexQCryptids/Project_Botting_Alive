@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://daqgp3nlba1oi"]
+[gd_scene load_steps=18 format=3 uid="uid://daqgp3nlba1oi"]
 
 [ext_resource type="Script" path="res://scripts/dial_screen.gd" id="1_2dlde"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_hmrs3"]
 [ext_resource type="Script" path="res://scripts/dialing_logic.gd" id="2_7mj4u"]
-[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="2_d6iok"]
 [ext_resource type="AudioStream" uid="uid://ccdkbnmd7ntnj" path="res://audio/voicebot1_main/GP_opening.mp3" id="3_orape"]
 [ext_resource type="Texture2D" uid="uid://b5mjt7w288ln3" path="res://rsc/button_icons/btn1.png" id="4_s0vhv"]
 [ext_resource type="Texture2D" uid="uid://crvmlp6jtmkpl" path="res://rsc/button_icons/btn2.png" id="5_t28tx"]
@@ -39,11 +38,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 script = ExtResource("1_2dlde")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialScreen"]
-clip_contents = true
-layout_mode = 2
-
-[node name="CurNum" type="Label" parent="DialScreen/HBoxContainer"]
+[node name="CurNum" type="Label" parent="DialScreen"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -54,16 +49,6 @@ text = "
 9990"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ContactsButton" type="Button" parent="DialScreen/HBoxContainer"]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-icon = ExtResource("2_d6iok")
-flat = true
-icon_alignment = 1
-expand_icon = true
 
 [node name="GridContainer" type="GridContainer" parent="DialScreen"]
 layout_mode = 2
@@ -79,6 +64,7 @@ stream = ExtResource("3_orape")
 
 [node name="BeepPlayer" type="AudioStreamPlayer" parent="DialScreen/GridContainer"]
 stream = ExtResource("6_hl6rj")
+bus = &"SFX"
 
 [node name="1" type="Button" parent="DialScreen/GridContainer" groups=["NumBtn"]]
 custom_minimum_size = Vector2(60, 60)
@@ -200,6 +186,5 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="DialScreen/HBoxContainer/ContactsButton" to="DialScreen" method="_on_contacts_button_pressed"]
 [connection signal="pressed" from="DialScreen/GridContainer/ButtonDel" to="DialScreen/GridContainer" method="_on_button_del_pressed"]
 [connection signal="pressed" from="DialScreen/GridContainer/ButtonCall" to="DialScreen/GridContainer" method="_on_button_call_pressed"]

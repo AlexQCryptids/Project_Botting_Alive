@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=13 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" path="res://scripts/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://rsc/img/main_background.png" id="1_pi3nr"]
@@ -7,11 +7,10 @@
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="4_fgoog"]
 [ext_resource type="Script" path="res://scripts/watch_ui.gd" id="5_jf44g"]
 [ext_resource type="Script" path="res://scripts/timers.gd" id="5_k45j3"]
-[ext_resource type="Texture2D" uid="uid://82qpk3fkapn7" path="res://rsc/img/watch_battery_empty.png" id="6_bvfv6"]
-[ext_resource type="Texture2D" uid="uid://cqgmjcvsesi3l" path="res://rsc/img/watch_battery_full.png" id="7_jxf74"]
-[ext_resource type="PackedScene" uid="uid://bhw77tm8ci538" path="res://game_scenes/watch_screen_apps.tscn" id="9_lsoir"]
+[ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://game_scenes/watch_screen_login.tscn" id="8_rmo7q"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://rsc/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://rsc/img/watch_knob.png" id="10_rfeen"]
+[ext_resource type="AudioStream" uid="uid://b8bexp5gg13sl" path="res://audio/backBtnSound.wav" id="11_hyw1h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)
@@ -97,9 +96,9 @@ anchor_top = -0.013
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -4.0
-offset_top = -0.12019
-offset_right = 3.50494
-offset_bottom = 4.63
+offset_top = -0.436999
+offset_right = 4.00012
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_fgoog")
@@ -111,48 +110,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 0
 
 [node name="UIBG" type="Panel" parent="WatchOverlay/Main/Panel/VBoxContainer"]
-custom_minimum_size = Vector2(320, 40)
+custom_minimum_size = Vector2(320, 25)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nmlg0")
 
 [node name="UI" type="HBoxContainer" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG"]
-custom_minimum_size = Vector2(310, 40)
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_right = -10.0
+offset_bottom = 23.0
 grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("5_jf44g")
 
 [node name="Time" type="Label" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG/UI"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 10
 text = "00:00"
-
-[node name="Battery" type="TextureProgressBar" parent="WatchOverlay/Main/Panel/VBoxContainer/UIBG/UI"]
-layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 4
-max_value = 5.0
-value = 5.0
-fill_mode = 1
-texture_under = ExtResource("6_bvfv6")
-texture_progress = ExtResource("7_jxf74")
+horizontal_alignment = 1
 
 [node name="Screen" type="Control" parent="WatchOverlay/Main/Panel/VBoxContainer" groups=["SceneLoader"]]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="AppScreen" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("9_lsoir")]
+[node name="Login" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("8_rmo7q")]
 layout_mode = 1
 
 [node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.811765)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -173,6 +163,10 @@ script = ExtResource("5_k45j3")
 
 [node name="MinTimer" type="Timer" parent="Timers"]
 autostart = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_hyw1h")
+bus = &"SFX"
 
 [connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]

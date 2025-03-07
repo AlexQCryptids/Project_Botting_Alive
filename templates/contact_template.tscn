@@ -1,21 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt4yum48xch12"]
+[gd_scene load_steps=5 format=3 uid="uid://dt4yum48xch12"]
 
 [ext_resource type="Script" path="res://scripts/contact_template.gd" id="1_01nq0"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_v8o4f"]
-[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="3_hn0gh"]
-[ext_resource type="AudioStream" uid="uid://c4toshyagn4mt" path="res://audio/clickSound.wav" id="4_rtuh0"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pelo5"]
-bg_color = Color(0.00133447, 0.0657473, 0.126114, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[ext_resource type="Texture2D" uid="uid://c6h107ugrt2vw" path="res://rsc/img/contact_icon_custom.png" id="3_kgjfj"]
+[ext_resource type="AudioStream" uid="uid://b8bexp5gg13sl" path="res://audio/backBtnSound.wav" id="4_4rbh5"]
 
 [node name="ContactTemplate" type="Button"]
 custom_minimum_size = Vector2(0, 75)
@@ -25,49 +13,59 @@ offset_bottom = 8.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-flat = true
+theme = ExtResource("1_v8o4f")
 script = ExtResource("1_01nq0")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme = ExtResource("1_v8o4f")
-theme_override_styles/panel = SubResource("StyleBoxFlat_pelo5")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = -9.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ContactIcon" type="TextureRect" parent="Panel/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture = ExtResource("3_hn0gh")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
+[node name="ContactIcon" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 4
-size_flags_stretch_ratio = 4.0
+texture = ExtResource("3_kgjfj")
+stretch_mode = 5
 
-[node name="ContactName" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+[node name="Initial" type="Label" parent="HBoxContainer/ContactIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.846991, 0.845171, 0.864592, 1)
+theme_override_colors/font_shadow_color = Color(0.462291, 0.462291, 0.462291, 1)
+theme_override_font_sizes/font_size = 30
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 15.0
+
+[node name="ContactName" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Contact Name"
 
-[node name="ContactNumber" type="Label" parent="Panel/HBoxContainer/VBoxContainer"]
+[node name="ContactNumber" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Phone Number"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_rtuh0")
+stream = ExtResource("4_4rbh5")
+bus = &"SFX"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

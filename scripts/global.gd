@@ -1,15 +1,20 @@
 extends Node
-
+#Settings Variables
+var music_vol = 0
+var sfx_vol = 0
+var bot_vol = 0
+#UI Variables
 var time_hr = 23
 var time_min = 0
 var battery = 5
-
-var last_scene = ["res://game_scenes/watch_screen_dialing.tscn"]
+#Calling Variables
+var last_scene = ["res://game_scenes/watch_screen_login.tscn"]
 
 var cur_num = ""
 var cur_num_seq = []
 
-var all_bots = {"4047432740":"res://bots/bank_bot.tscn",
+var all_bots = {"0":"res://bots/unavailable_bot.tscn",
+				"4047432740":"res://bots/bank_bot.tscn",
 				"8886605810":"res://bots/georgia_power_bot.tscn"}
 
 
@@ -28,6 +33,9 @@ func swap_scene(last,new):
 func set_current_call(num_str:String,num_seq:Array):
 	cur_num = num_str
 	cur_num_seq = num_seq
-
-
 	
+func reset_current_call():
+	set_current_call("",[])
+	
+func set_no_caller(seq):
+	set_current_call("0",seq)

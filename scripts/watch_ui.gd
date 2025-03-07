@@ -5,12 +5,10 @@ var hour = Global.time_hr
 var minute = Global.time_min
 
 @onready var time = $Time
-@onready var battery = $Battery
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	set_time()
-	battery.value = Global.battery
 	
 func set_time():
 	#Set Start Time variables
@@ -31,6 +29,3 @@ func set_time():
 		time_str += str(minute)
 		
 	time.text = time_str #Sets time label to current time
-
-func set_battery():
-	battery.value = Global.battery

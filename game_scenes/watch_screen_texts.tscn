@@ -19,6 +19,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 11.0
+offset_right = -12.0
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
@@ -31,20 +32,25 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="TextContactTemplate" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+[node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+cont_name = "Mom"
 
-[node name="TextContactTemplate2" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+[node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+cont_name = "Beth"
 
-[node name="TextContactTemplate3" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+[node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+cont_name = "Collin"
 
-[node name="TextContactTemplate4" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+[node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+cont_name = "Dad"
 
-[node name="TextContactTemplate5" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+cont_name = "Bank"
 
 [node name="TextContactTemplate6" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2

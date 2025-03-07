@@ -59,6 +59,7 @@ columns = 3
 
 [node name="BeepPlayer" type="AudioStreamPlayer" parent="CallScreen/GridContainer"]
 stream = ExtResource("3_mbay8")
+bus = &"SFX"
 
 [node name="1" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
 layout_mode = 2

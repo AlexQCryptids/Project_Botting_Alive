@@ -1,28 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdwkvcrk5072l"]
+[gd_scene load_steps=3 format=3 uid="uid://bdwkvcrk5072l"]
 
 [ext_resource type="Script" path="res://scripts/text_message_template.gd" id="1_ppqfh"]
+[ext_resource type="Texture2D" uid="uid://kf81rwt3orvv" path="res://rsc/img/text_sprite2.png" id="2_3lr6l"]
 
-[node name="TextMessageTemplate" type="Control"]
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(50, 55)
 layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+script = ExtResource("1_ppqfh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ppqfh")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_3lr6l")
 
 [node name="message" type="Label" parent="VBoxContainer/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_right = 0.983
+anchor_bottom = 1.0
+offset_left = 0.0240002
+offset_right = -0.416016
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="time" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "12:00
+"
+horizontal_alignment = 2
+
+[node name="messageHidden" type="Label" parent="."]
+custom_minimum_size = Vector2(50, 5)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 73.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 25
+text = "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"
+autowrap_mode = 1

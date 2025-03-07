@@ -2,7 +2,7 @@ extends GridContainer
 
 @onready var audio_player = $AudioStreamPlayer
 @onready var beep_player = $BeepPlayer # Reference to the AudioStreamPlayer
-@onready var dialing_num = $"../HBoxContainer/CurNum"
+@onready var dialing_num = $"../CurNum"
 
 var can_proceed = false
 var dial_sequence = []
@@ -18,10 +18,6 @@ func _ready():
 	#Set Number Dialing to nothing
 	dialing_num.text = ""
 	
-	var root_path = "res://audio/voicebot1_main"
-	#folder_structure = read_directory_structure(root_path) # update golable folder_structure
-	#print(folder_structure)
-		
 	# Connect the finished signal of the AudioStreamPlayer
 	audio_player.connect("finished", Callable(self, "_on_audio_finished"))
 

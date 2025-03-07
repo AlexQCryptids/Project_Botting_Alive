@@ -22,7 +22,10 @@ func load_bot():
 	cur_bot = load(Global.all_bots[Global.cur_num]).instantiate()
 	self.add_child(cur_bot)
 	
-	cur_num.text = Global.cur_num #Show what number you're calling
+	var num = ""
+	for i in Global.cur_num_seq:
+		num += str(i)
+	cur_num.text = num #Global.cur_num #Show what number you're calling
 
 func _on_button_pressed_dial(value):
 	beep_player.play()
@@ -37,6 +40,5 @@ func _on_button_pressed_dial(value):
 
 func _on_button_hang_pressed() -> void:
 	beep_player.play()
-	Global.cur_num = ""
-	Global.cur_num_seq = []
+	Global.reset_current_call()
 	Global.change_scene("res://game_scenes/watch_screen_dialing.tscn")

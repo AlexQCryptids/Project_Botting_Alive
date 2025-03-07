@@ -1,9 +1,60 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://7xe3ua6la8hr"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://7xe3ua6la8hr"]
 
 [ext_resource type="FontFile" uid="uid://dyc8bwj4qe83n" path="res://rsc/depixel_font/depixelhalbfett.woff2" id="1_kbnbm"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qi8a"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_500m6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sys6i"]
+bg_color = Color(0.0588235, 0.0588235, 0.0588235, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftntr"]
+bg_color = Color(0.0923971, 0.0923971, 0.092397, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.111197, 0.111197, 0.111197, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s7cx"]
+bg_color = Color(0.176419, 0.176419, 0.176419, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j832c"]
+bg_color = Color(0.698039, 0.698039, 0.698039, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.698039, 0.698039, 0.698039, 1)
+border_blend = true
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_color = Color(0, 0, 0, 0.0470588)
+shadow_size = 1
+shadow_offset = Vector2(1, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp85s"]
-bg_color = Color(0.103744, 0.103744, 0.103744, 1)
+bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -32,11 +83,19 @@ corner_radius_bottom_left = 5
 
 [resource]
 default_font = ExtResource("1_kbnbm")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.147672, 0.147672, 0.147672, 0.5)
 Button/colors/icon_hover_color = Color(0.695503, 0.695503, 0.695503, 1)
 Button/colors/icon_hover_pressed_color = Color(0.223529, 0.223529, 0.223529, 1)
 Button/colors/icon_pressed_color = Color(0.223529, 0.223529, 0.223529, 1)
 Button/font_sizes/font_size = 14
 Button/fonts/font = ExtResource("1_kbnbm")
+Button/styles/disabled = SubResource("StyleBoxFlat_4qi8a")
+Button/styles/focus = SubResource("StyleBoxEmpty_500m6")
+Button/styles/hover = SubResource("StyleBoxFlat_sys6i")
+Button/styles/normal = SubResource("StyleBoxFlat_ftntr")
+Button/styles/pressed = SubResource("StyleBoxFlat_1s7cx")
+HSlider/styles/slider = SubResource("StyleBoxFlat_j832c")
 Label/fonts/font = ExtResource("1_kbnbm")
 Panel/styles/panel = SubResource("StyleBoxFlat_wp85s")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_ihcb0")

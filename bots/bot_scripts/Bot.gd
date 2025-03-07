@@ -12,7 +12,7 @@ var target = []
 signal input_recieved
 
 func run(): #Base Function
-	pass
+	bus = "Bot"
 
 func input_changed():
 	print(cur_num)
@@ -31,3 +31,8 @@ func play_audio(file_path):
 		stream = audio_stream
 		play()
 		can_proceed = false
+		
+func finished(scene="res://game_scenes/watch_screen_dialing.tscn"):
+	play_audio("res://audio/SFX/hangup_beep.mp3")
+	await self.finished
+	Global.change_scene(scene)
