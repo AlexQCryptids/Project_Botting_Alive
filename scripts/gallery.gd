@@ -68,7 +68,7 @@ func _on_control_pressed() -> void:
 
 
 func _on_line_edit_text_changed(new_text: String) -> void:
-	if new_text == "0205":
+	if new_text == "0305":
 		$Panel.visible = false
 		cur_img = images[0]
 		cur_index = 0
