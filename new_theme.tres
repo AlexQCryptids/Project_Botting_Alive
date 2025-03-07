@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://7xe3ua6la8hr"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://7xe3ua6la8hr"]
 
 [ext_resource type="FontFile" uid="uid://dyc8bwj4qe83n" path="res://rsc/depixel_font/depixelhalbfett.woff2" id="1_kbnbm"]
 
@@ -53,6 +53,18 @@ shadow_color = Color(0, 0, 0, 0.0470588)
 shadow_size = 1
 shadow_offset = Vector2(1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amlv4"]
+bg_color = Color(0.877616, 0.877616, 0.877616, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp85s"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
@@ -97,6 +109,8 @@ Button/styles/normal = SubResource("StyleBoxFlat_ftntr")
 Button/styles/pressed = SubResource("StyleBoxFlat_1s7cx")
 HSlider/styles/slider = SubResource("StyleBoxFlat_j832c")
 Label/fonts/font = ExtResource("1_kbnbm")
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/styles/normal = SubResource("StyleBoxFlat_amlv4")
 Panel/styles/panel = SubResource("StyleBoxFlat_wp85s")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_ihcb0")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_swk7h")

@@ -17,15 +17,17 @@ var hovering_view_image = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	view.visible = false
-	var i = 0
-	for image in images:
+	#var i = 1
+	for i in images.size()-1:
+		i += 1
+		print(i)
+		var image = images[i]
 		var child = TextureRect.new()
 		child.texture = image
 		child.custom_minimum_size = Vector2(100,100)
 		child.connect("mouse_entered",_on_mouse_entered.bind(image,i))
 		child.connect("mouse_exited",_on_mouse_exited)
 		$ScrollContainer/GridContainer.add_child(child)
-		i += 1
 	
 
 func _input(event: InputEvent):
@@ -40,6 +42,8 @@ func _input(event: InputEvent):
 			view.visible = false
 			view_image.texture = null
 			audio_player.play()
+	if Input.is_key_pressed(KEY_ESCAPE) and $Panel.visible == true:
+		$Panel.visible = false
 
 func _on_mouse_entered(img,idx):
 	hovering = true
@@ -55,3 +59,33 @@ func _on_view_mouse_entered() -> void:
 
 func _on_view_mouse_exited() -> void:
 	hovering_view_image = false
+
+
+func _on_control_pressed() -> void:
+	$Panel.visible = true
+	hovering = false
+	
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	if new_text == "0205":
+		$Panel.visible = false
+		cur_img = images[0]
+		cur_index = 0
+		view_image.texture = cur_img
+		view.visible = true
+		view_label.text = info[cur_index]
+		audio_player.play()
+		
+
+
+func _on_line_edit_editing_toggled(toggled_on: bool) -> void:
+	var new_text = $Panel/VBoxContainer/LineEdit.text
+	if new_text == "0205":
+		$Panel.visible = false
+		cur_img = images[0]
+		cur_index = 0
+		view_image.texture = cur_img
+		view.visible = true
+		view_label.text = info[cur_index]
+		audio_player.play()

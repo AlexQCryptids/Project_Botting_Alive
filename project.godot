@@ -19,6 +19,7 @@ config/icon="res://rsc/GameIcon.png"
 [autoload]
 
 Global="*res://scripts/global.gd"
+Unlockable="*res://scripts/Unlockable.gd"
 
 [display]
 

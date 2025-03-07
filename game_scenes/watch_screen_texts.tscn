@@ -34,6 +34,7 @@ theme_override_constants/separation = 5
 
 [node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
+scene = "res://texts/text_scenes/MomText.tscn"
 cont_name = "Mom"
 
 [node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
@@ -44,22 +45,15 @@ cont_name = "Beth"
 layout_mode = 2
 cont_name = "Collin"
 
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+scene = "res://texts/text_scenes/BankText.tscn"
+cont_name = "Bank"
+
+[node name="Friend1" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
+layout_mode = 2
+cont_name = "Alexis"
+
 [node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
 layout_mode = 2
 cont_name = "Dad"
-
-[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
-layout_mode = 2
-cont_name = "Bank"
-
-[node name="TextContactTemplate6" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
-layout_mode = 2
-
-[node name="TextContactTemplate7" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
-layout_mode = 2
-
-[node name="TextContactTemplate8" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
-layout_mode = 2
-
-[node name="TextContactTemplate9" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_j1dbu")]
-layout_mode = 2

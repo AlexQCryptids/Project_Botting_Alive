@@ -6,11 +6,13 @@
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(50, 55)
 layout_mode = 3
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
+size_flags_vertical = 3
 script = ExtResource("1_ppqfh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -31,18 +33,21 @@ texture = ExtResource("2_3lr6l")
 
 [node name="message" type="Label" parent="VBoxContainer/TextureRect"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.013
-anchor_right = 0.983
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.0240002
-offset_right = -0.416016
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 14
-text = "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"
+theme_override_font_sizes/font_size = 7
+text = "Publix #1061 ATLANTA GA -40.82
+	Zelle payment from COLLIN ABBONDI +100
+	ABBONDI’S DINER #05008 ATLANTA GA -37.42
+	BARNES & NOBLE #1061 ATLANTA GA - 20.59
+	EMORY DINING DANCING GOAT ATLANTA GA -3.43"
 horizontal_alignment = 1
-autowrap_mode = 3
+vertical_alignment = 1
+autowrap_mode = 1
+text_overrun_behavior = 1
 
 [node name="time" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -54,13 +59,18 @@ horizontal_alignment = 2
 [node name="messageHidden" type="Label" parent="."]
 custom_minimum_size = Vector2(50, 5)
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 73.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0)
-theme_override_font_sizes/font_size = 25
-text = "hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello"
-autowrap_mode = 1
+theme_override_font_sizes/font_size = 12
+text = "Publix #1061 ATLANTA GA -40.82
+	Zelle payment from COLLIN ABBONDI +100
+	ABBONDI’S DINER #05008 ATLANTA GA -37.42
+	BARNES & NOBLE #1061 ATLANTA GA - 20.59
+	EMORY DINING DANCING GOAT ATLANTA GA -3.43"
+autowrap_mode = 2

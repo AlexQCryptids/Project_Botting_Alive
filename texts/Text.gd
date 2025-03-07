@@ -13,3 +13,12 @@ func add_text(time, receiver, msg_text):
 	cur_msg.set_message(msg_text)
 	cur_msg.set_type(receiver)
 	
+func add_date(time):
+	var text = Label.new()
+	parent.add_child(text)
+	text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	text.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	text.custom_minimum_size.y = 75
+	#text.add_theme_font_size_override("font_size",16)
+	
+	text.text = time

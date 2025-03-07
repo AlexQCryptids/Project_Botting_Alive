@@ -11,9 +11,15 @@ var target = []
 
 signal input_recieved
 
+
 func run(): #Base Function
 	bus = "Bot"
+	self.connect("finished",_on_finished)
+	greeting()
 
+func greeting():
+	pass#to be overriden
+	
 func input_changed():
 	print(cur_num)
 	if cur_num in target:
@@ -32,7 +38,10 @@ func play_audio(file_path):
 		play()
 		can_proceed = false
 		
-func finished(scene="res://game_scenes/watch_screen_dialing.tscn"):
-	play_audio("res://audio/SFX/hangup_beep.mp3")
-	await self.finished
+func hangup(scene="res://game_scenes/watch_screen_dialing.tscn"):
+	play_audio("res://audio/SFX/button_beep.wav")
+	await finished
 	Global.change_scene(scene)
+	
+func _on_finished():
+	can_proceed = true

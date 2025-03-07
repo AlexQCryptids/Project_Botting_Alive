@@ -15,7 +15,7 @@ var cur_num_seq = []
 
 var all_bots = {"0":"res://bots/unavailable_bot.tscn",
 				"4047432740":"res://bots/bank_bot.tscn",
-				"8886605810":"res://bots/georgia_power_bot.tscn"}
+				"0703581654":"res://bots/restaurant_bot.tscn"}
 
 
 func change_scene(scene:String):
