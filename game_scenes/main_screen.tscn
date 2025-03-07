@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://game_scenes/watch_screen_login.tscn" id="8_rmo7q"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://rsc/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://rsc/img/watch_knob.png" id="10_rfeen"]
-[ext_resource type="AudioStream" uid="uid://b8bexp5gg13sl" path="res://audio/backBtnSound.wav" id="11_hyw1h"]
+[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://audio/SFX/backBtnSound.wav" id="11_v11kl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)
@@ -165,7 +165,7 @@ script = ExtResource("5_k45j3")
 autostart = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_hyw1h")
+stream = ExtResource("11_v11kl")
 bus = &"SFX"
 
 [connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]

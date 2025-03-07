@@ -2,8 +2,8 @@
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_41vhh"]
 [ext_resource type="Script" uid="uid://dphm87ruqnhxi" path="res://scripts/app_template.gd" id="2_kewky"]
-[ext_resource type="AudioStream" uid="uid://b8bexp5gg13sl" path="res://audio/backBtnSound.wav" id="4_5k6h8"]
 [ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://rsc/img/contact_icon.png" id="4_6woe2"]
+[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://audio/SFX/backBtnSound.wav" id="4_obf2q"]
 
 [node name="App" type="Button"]
 custom_minimum_size = Vector2(190, 80)
@@ -38,7 +38,7 @@ theme_override_font_sizes/font_size = 16
 text = "AppName"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5k6h8")
+stream = ExtResource("4_obf2q")
 bus = &"SFX"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

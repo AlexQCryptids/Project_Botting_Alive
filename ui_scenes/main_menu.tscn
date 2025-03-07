@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_bem6t"]
 [ext_resource type="Script" uid="uid://o7v158wwbbsc" path="res://scripts/main_menu.gd" id="2_eyc6t"]
 [ext_resource type="Texture2D" uid="uid://drqj5mebb4mu7" path="res://rsc/BG_img1.png" id="3_hgx2v"]
-[ext_resource type="AudioStream" uid="uid://premy2iyt3g0" path="res://audio/allora3-1-25.mp3" id="4_ldmnv"]
+[ext_resource type="AudioStream" uid="uid://c2vaw5fgrfk0k" path="res://audio/Themes/allora3-1-25.mp3" id="4_ncovw"]
 
 [sub_resource type="Animation" id="Animation_vt5fv"]
 length = 1.5
@@ -90,6 +90,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ldmnv")
+stream = ExtResource("4_ncovw")
 autoplay = true
 parameters/looping = false

@@ -7,6 +7,8 @@ extends Control
 @onready var view = $View
 @onready var view_label = $View/VBoxContainer/Label
 
+@onready var audio_player = $AudioStreamPlayer
+
 var hovering = false
 var cur_img = null
 var cur_index = 0
@@ -32,10 +34,12 @@ func _input(event: InputEvent):
 			view_image.texture = cur_img
 			view.visible = true
 			view_label.text = info[cur_index]
+			audio_player.play()
 			
 		if  Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and view.visible==true and hovering_view_image==true:
 			view.visible = false
 			view_image.texture = null
+			audio_player.play()
 
 func _on_mouse_entered(img,idx):
 	hovering = true

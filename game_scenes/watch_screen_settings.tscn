@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://2npewlphyple"]
+[gd_scene load_steps=4 format=3 uid="uid://2npewlphyple"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_d12c4"]
 [ext_resource type="Script" uid="uid://bccxsn4141jtd" path="res://scripts/settings.gd" id="2_qph58"]
+[ext_resource type="AudioStream" uid="uid://dcrxjs8yngykh" path="res://audio/SFX/loginSound3.wav" id="3_sgq4b"]
 
 [node name="SettingsScreen" type="Control"]
 layout_mode = 3
@@ -77,6 +78,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 min_value = -6.0
 max_value = 6.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sgq4b")
 
 [connection signal="value_changed" from="HBoxContainer/VBoxContainer2/Music" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="HBoxContainer/VBoxContainer2/SFX" to="." method="_on_sfx_value_changed"]

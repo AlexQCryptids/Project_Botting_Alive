@@ -8,6 +8,8 @@ var default = 0
 @onready var music = $HBoxContainer/VBoxContainer2/Music
 @onready var bot = $HBoxContainer/VBoxContainer2/Bot
 
+@onready var audio_player = $AudioStreamPlayer
+
 var sfx_bus = AudioServer.get_bus_index("SFX")
 var music_bus = AudioServer.get_bus_index("Master")
 var bot_bus = AudioServer.get_bus_index("Bot")
@@ -28,13 +30,18 @@ func _ready() -> void:
 func _on_music_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(music_bus,value)
 	Global.music_vol = value
-
+	audio_player.bus = "Master"
+	audio_player.play()
 
 func _on_sfx_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(sfx_bus,value)
 	Global.sfx_vol = value
+	audio_player.bus = "SFX"
+	audio_player.play()
 
 
 func _on_bot_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(bot_bus,value)
 	Global.bot_vol = value
+	audio_player.bus = "Bot"
+	audio_player.play()
