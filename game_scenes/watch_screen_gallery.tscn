@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://qx6d6vvkcx70"]
 
-[ext_resource type="Script" path="res://scripts/gallery.gd" id="1_a1s4g"]
+[ext_resource type="Script" uid="uid://dw8mq1r7h63dg" path="res://scripts/gallery.gd" id="1_a1s4g"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_js4hf"]
 [ext_resource type="Texture2D" uid="uid://c6h107ugrt2vw" path="res://rsc/img/contact_icon_custom.png" id="2_fa66i"]
 

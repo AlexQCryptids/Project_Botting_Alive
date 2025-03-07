@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwvs5cfmjq1jb"]
 
-[ext_resource type="Script" path="res://bots/bot_scripts/unavailable_bot.gd" id="1_ax80v"]
+[ext_resource type="Script" uid="uid://dfnjvx2gw0kqi" path="res://bots/bot_scripts/unavailable_bot.gd" id="1_ax80v"]
 
 [node name="UnavailableBot" type="AudioStreamPlayer"]
 script = ExtResource("1_ax80v")

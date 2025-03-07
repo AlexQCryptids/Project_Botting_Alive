@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Botting Alive"
-run/main_scene="res://ui_scenes/main_menu.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://ck8wancf127j1"
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="res://rsc/BG_img1.png"
 config/icon="res://rsc/GameIcon.png"
 

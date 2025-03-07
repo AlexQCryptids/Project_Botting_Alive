@@ -1,15 +1,27 @@
-[gd_scene load_steps=11 format=3 uid="uid://be1ybj4t2a8ko"]
+[gd_scene load_steps=8 format=3 uid="uid://be1ybj4t2a8ko"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_l6jma"]
-[ext_resource type="Script" path="res://scripts/cutscreen.gd" id="2_1512w"]
-[ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://rsc/img/main_background.png" id="3_alx8d"]
-[ext_resource type="Texture2D" uid="uid://bls1dqgdm1ye4" path="res://rsc/gallery_images/test_img1.png" id="4_hovi4"]
-[ext_resource type="AudioStream" uid="uid://crei37o6o8ecq" path="res://audio/SFX/The Funny One.wav" id="5_0anvq"]
+[ext_resource type="Script" uid="uid://cjc48d4deh8f1" path="res://scripts/cutscreen.gd" id="2_1512w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcawi"]
 bg_color = Color(0, 0, 0, 0.537255)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
+
+[sub_resource type="Animation" id="Animation_0ltrf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_vmxug"]
 resource_name = "fade_out"
@@ -27,25 +39,10 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0.712692, 2.93598e-06, 5.77569e-07, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_0ltrf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m6cd1"]
 _data = {
-"RESET": SubResource("Animation_0ltrf"),
-"fade_out": SubResource("Animation_vmxug")
+&"RESET": SubResource("Animation_0ltrf"),
+&"fade_out": SubResource("Animation_vmxug")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr8eh"]
@@ -60,11 +57,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_l6jma")
 script = ExtResource("2_1512w")
-scenes = Array[Texture2D]([ExtResource("3_alx8d"), ExtResource("4_hovi4")])
-lines = Array[String](["Can you just listen to me for once?", "No! You’re being ridiculous!", "God, you always do this.", "Because you say stupid shit and then act confused when I get mad, Beth!", "You’re only mad because you’re twisting my words. I’m trying to explain-", "There’s nothing to explain! I wanted tonight to go well and you had to go and ruin it.", "Ruin it– what are you even talking about?", "I just... God, I can’t deal with you right now."])
-next_scene_line = Array[int]([2])
-speaker = Array[Color]([Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1)])
-audio = ExtResource("5_0anvq")
 
 [node name="BG" type="Panel" parent="."]
 layout_mode = 1
@@ -81,7 +73,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_hovi4")
 expand_mode = 1
 stretch_mode = 5
 
@@ -115,7 +106,7 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_m6cd1")
+&"": SubResource("AnimationLibrary_m6cd1")
 }
 
 [node name="Panel" type="Panel" parent="."]
@@ -129,7 +120,6 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xr8eh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_0anvq")
 autoplay = true
 
 [node name="info" type="Label" parent="."]

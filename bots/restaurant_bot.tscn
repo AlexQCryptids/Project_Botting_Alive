@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bia1nhmwokosb"]
 
-[ext_resource type="Script" path="res://bots/bot_scripts/RestaurantBot.gd" id="1_sqr24"]
+[ext_resource type="Script" uid="uid://cxf0y76yfl6y5" path="res://bots/bot_scripts/RestaurantBot.gd" id="1_sqr24"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 script = ExtResource("1_sqr24")

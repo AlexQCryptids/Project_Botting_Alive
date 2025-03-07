@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dt4yum48xch12" path="res://templates/contact_template.tscn" id="1_5f8wy"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_8dynd"]
-[ext_resource type="Script" path="res://scripts/contacts_screen.gd" id="2_umjar"]
+[ext_resource type="Script" uid="uid://bymkp7ihlf0ap" path="res://scripts/contacts_screen.gd" id="2_umjar"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3

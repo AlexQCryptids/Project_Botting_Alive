@@ -1,9 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://daqgp3nlba1oi"]
 
-[ext_resource type="Script" path="res://scripts/dial_screen.gd" id="1_2dlde"]
+[ext_resource type="Script" uid="uid://bmv4qpcx0gsfx" path="res://scripts/dial_screen.gd" id="1_2dlde"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_hmrs3"]
-[ext_resource type="Script" path="res://scripts/dialing_logic.gd" id="2_7mj4u"]
-[ext_resource type="AudioStream" uid="uid://ccdkbnmd7ntnj" path="res://audio/voicebot1_main/GP_opening.mp3" id="3_orape"]
+[ext_resource type="Script" uid="uid://b8rp1m7w5ut4" path="res://scripts/dialing_logic.gd" id="2_7mj4u"]
 [ext_resource type="Texture2D" uid="uid://b5mjt7w288ln3" path="res://rsc/button_icons/btn1.png" id="4_s0vhv"]
 [ext_resource type="Texture2D" uid="uid://crvmlp6jtmkpl" path="res://rsc/button_icons/btn2.png" id="5_t28tx"]
 [ext_resource type="Texture2D" uid="uid://bqgyn7c2y05t" path="res://rsc/button_icons/btn3.png" id="6_dlcb0"]
@@ -17,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://bngad2ij4k3ov" path="res://rsc/button_icons/btndel.png" id="13_78mrq"]
 [ext_resource type="Texture2D" uid="uid://cqgadek4jpona" path="res://rsc/button_icons/btn10.png" id="14_2qw33"]
 [ext_resource type="Texture2D" uid="uid://h83mwt5gah6o" path="res://rsc/button_icons/btncall.png" id="15_h0xwl"]
+
+[sub_resource type="Resource" id="Resource_na1i1"]
+metadata/__load_path__ = "res://audio/voicebot1_main/GP_opening.mp3"
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -60,7 +62,7 @@ columns = 3
 script = ExtResource("2_7mj4u")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialScreen/GridContainer"]
-stream = ExtResource("3_orape")
+stream = SubResource("Resource_na1i1")
 
 [node name="BeepPlayer" type="AudioStreamPlayer" parent="DialScreen/GridContainer"]
 stream = ExtResource("6_hl6rj")
