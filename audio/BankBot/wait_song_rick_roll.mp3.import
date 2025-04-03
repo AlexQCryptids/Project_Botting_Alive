@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cnh71lo7ieq7m"
-path="res://.godot/imported/wait_song_rick_roll.mp3-82cff89ea2b37d1844ff44adabcf1fd1.mp3str"
+path="res://.godot/imported/wait_song_rick_roll.mp3-9b9ab7737959ae0d8926d7ab2fa76adf.mp3str"
 
 [deps]
 
-source_file="res://Audio/BankBot/wait_song_rick_roll.mp3"
-dest_files=["res://.godot/imported/wait_song_rick_roll.mp3-82cff89ea2b37d1844ff44adabcf1fd1.mp3str"]
+source_file="res://audio/BankBot/wait_song_rick_roll.mp3"
+dest_files=["res://.godot/imported/wait_song_rick_roll.mp3-9b9ab7737959ae0d8926d7ab2fa76adf.mp3str"]
 
 [params]
 

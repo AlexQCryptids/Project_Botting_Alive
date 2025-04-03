@@ -13,5 +13,5 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	$AudioStreamPlayer.play()
-	Global.swap_scene("res://game_scenes/watch_screen_texts.tscn",scene)
+	Global.swap_scene("res://Assets/Message_app/watch_screen_texts.tscn",scene)
 	

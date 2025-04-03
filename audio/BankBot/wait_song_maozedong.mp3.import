@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://drw08ecuq0kwx"
-path="res://.godot/imported/wait_song_maozedong.mp3-842ed4f64a53c33a334c6923761a9f1e.mp3str"
+path="res://.godot/imported/wait_song_maozedong.mp3-0c0ada48d8091093a26c97b0a0cb2c31.mp3str"
 
 [deps]
 
-source_file="res://Audio/BankBot/wait_song_maozedong.mp3"
-dest_files=["res://.godot/imported/wait_song_maozedong.mp3-842ed4f64a53c33a334c6923761a9f1e.mp3str"]
+source_file="res://audio/BankBot/wait_song_maozedong.mp3"
+dest_files=["res://.godot/imported/wait_song_maozedong.mp3-0c0ada48d8091093a26c97b0a0cb2c31.mp3str"]
 
 [params]
 

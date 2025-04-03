@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://1s0li8bogwi0"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_3gu0y"]
-[ext_resource type="PackedScene" uid="uid://dm6c4ebqlkghn" path="res://templates/text_contact_template.tscn" id="2_p7yrn"]
+[ext_resource type="PackedScene" uid="uid://dm6c4ebqlkghn" path="res://Assets/Message_app/text_contact_template.tscn" id="2_p7yrn"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -34,27 +34,30 @@ theme_override_constants/separation = 5
 
 [node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://texts/text_scenes/MomText.tscn"
+scene = "res://Assets/Message_app/text_scenes/MomText.tscn"
 cont_name = "Mom"
 
 [node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://texts/text_scenes/BethText.tscn"
+scene = "res://Assets/Message_app/text_scenes/BethText.tscn"
 cont_name = "Beth"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
+scene = "res://Assets/Message_app/text_template.tscn"
 cont_name = "Collin"
 
 [node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://texts/text_scenes/BankText.tscn"
+scene = "res://Assets/Message_app/text_scenes/BankText.tscn"
 cont_name = "Bank"
 
 [node name="Friend1" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
+scene = "res://Assets/Message_app/text_template.tscn"
 cont_name = "Alexis"
 
 [node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
+scene = "res://Assets/Message_app/text_template.tscn"
 cont_name = "Dad"

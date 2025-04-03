@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c2vaw5fgrfk0k"
-path="res://.godot/imported/allora3-1-25.mp3-7d1188bc94a2f4ba7c2f23453dce88cb.mp3str"
+path="res://.godot/imported/allora3-1-25.mp3-9084e626c7d79e8316caaa27aaa2355e.mp3str"
 
 [deps]
 
-source_file="res://Audio/Themes/allora3-1-25.mp3"
-dest_files=["res://.godot/imported/allora3-1-25.mp3-7d1188bc94a2f4ba7c2f23453dce88cb.mp3str"]
+source_file="res://audio/Themes/allora3-1-25.mp3"
+dest_files=["res://.godot/imported/allora3-1-25.mp3-9084e626c7d79e8316caaa27aaa2355e.mp3str"]
 
 [params]
 
