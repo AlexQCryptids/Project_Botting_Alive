@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bu7hokptx4ic2"
-path="res://.godot/imported/accout_info.mp3-c095f7b718bc3e810c7eca20fb9254f3.mp3str"
+path="res://.godot/imported/accout_info.mp3-0389d4a9dbf77d86d2346f027388daf5.mp3str"
 
 [deps]
 
-source_file="res://audio/BankBot/accout_info.mp3"
-dest_files=["res://.godot/imported/accout_info.mp3-c095f7b718bc3e810c7eca20fb9254f3.mp3str"]
+source_file="res://Audio/BankBot/accout_info.mp3"
+dest_files=["res://.godot/imported/accout_info.mp3-0389d4a9dbf77d86d2346f027388daf5.mp3str"]
 
 [params]
 

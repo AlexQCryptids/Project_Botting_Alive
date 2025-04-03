@@ -1,0 +1,177 @@
+[gd_scene load_steps=15 format=3 uid="uid://bhuc8e3ilhexv"]
+
+[ext_resource type="Script" uid="uid://bp03sl7k5jiu6" path="res://Assets/Dialing_app/call_screen.gd" id="1_k5i6n"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="2_6uo7t"]
+[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://Audio/SFX/clickSound.wav" id="3_bkvj5"]
+[ext_resource type="Texture2D" uid="uid://b5mjt7w288ln3" path="res://Art/button_icons/btn1.png" id="4_4sjfu"]
+[ext_resource type="Texture2D" uid="uid://crvmlp6jtmkpl" path="res://Art/button_icons/btn2.png" id="5_g1tax"]
+[ext_resource type="Texture2D" uid="uid://bqgyn7c2y05t" path="res://Art/button_icons/btn3.png" id="6_wjuwc"]
+[ext_resource type="Texture2D" uid="uid://rbya4welhsa3" path="res://Art/button_icons/btn4.png" id="7_5aewm"]
+[ext_resource type="Texture2D" uid="uid://1e4142xso6pa" path="res://Art/button_icons/btn5.png" id="8_01aah"]
+[ext_resource type="Texture2D" uid="uid://b5rdx1nqru41y" path="res://Art/button_icons/btn6.png" id="9_mdf20"]
+[ext_resource type="Texture2D" uid="uid://smpuvw2blalv" path="res://Art/button_icons/btn7.png" id="10_l1kl8"]
+[ext_resource type="Texture2D" uid="uid://wseijixfy1d8" path="res://Art/button_icons/btn8.png" id="11_7jovf"]
+[ext_resource type="Texture2D" uid="uid://banjcsootcw8b" path="res://Art/button_icons/btn9.png" id="12_td4kx"]
+[ext_resource type="Texture2D" uid="uid://cqgadek4jpona" path="res://Art/button_icons/btn10.png" id="13_rk1qo"]
+[ext_resource type="Texture2D" uid="uid://cyig11sujvlr6" path="res://Art/button_icons/btnhang.png" id="14_2m4lw"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="CallScreen" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_k5i6n")
+
+[node name="CurNum" type="Label" parent="CallScreen"]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme = ExtResource("2_6uo7t")
+theme_override_constants/line_spacing = -50
+theme_override_font_sizes/font_size = 30
+text = "
+9990"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="GridContainer" type="GridContainer" parent="CallScreen"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_6uo7t")
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="BeepPlayer" type="AudioStreamPlayer" parent="CallScreen/GridContainer"]
+stream = ExtResource("3_bkvj5")
+bus = &"SFX"
+
+[node name="1" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+icon = ExtResource("4_4sjfu")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="2" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("5_g1tax")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="3" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("6_wjuwc")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="4" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("7_5aewm")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="5" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("8_01aah")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="6" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("9_mdf20")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="7" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("10_l1kl8")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="8" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("11_7jovf")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="9" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+icon = ExtResource("12_td4kx")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonDel" type="Button" parent="CallScreen/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="0" type="Button" parent="CallScreen/GridContainer" groups=["NumBtn"]]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("13_rk1qo")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonHang" type="Button" parent="CallScreen/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource("14_2m4lw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="CallScreen/GridContainer/ButtonHang" to="CallScreen" method="_on_button_hang_pressed"]

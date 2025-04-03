@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=13 format=3 uid="uid://7xe3ua6la8hr"]
 
-[ext_resource type="FontFile" uid="uid://dyc8bwj4qe83n" path="res://rsc/depixel_font/depixelhalbfett.woff2" id="1_kbnbm"]
+[ext_resource type="FontFile" uid="uid://dyc8bwj4qe83n" path="res://Art/depixel_font/depixelhalbfett.woff2" id="1_kbnbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qi8a"]
 bg_color = Color(0, 0, 0, 1)

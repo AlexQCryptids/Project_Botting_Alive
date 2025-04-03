@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhw77tm8ci538"]
+
+[ext_resource type="PackedScene" uid="uid://bghsy8awf8hqb" path="res://templates/app_template.tscn" id="1_ue5s6"]
+[ext_resource type="Texture2D" uid="uid://uyaf83foo06y" path="res://Art/img/call_icon.png" id="2_jhhwb"]
+[ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://Art/img/contact_icon.png" id="3_4tfdd"]
+[ext_resource type="Texture2D" uid="uid://ek5qr2ibu7w5" path="res://Art/img/text_icon.png" id="4_plx2s"]
+[ext_resource type="Texture2D" uid="uid://s51utayfnh84" path="res://Art/img/gallery_icon.png" id="5_idqlo"]
+[ext_resource type="Texture2D" uid="uid://7emdxxpv82mi" path="res://Art/img/settings_icon.png" id="6_7n3tr"]
+
+[node name="AppScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -8.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="AppContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PhoneApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Phone"
+app_icon_img = ExtResource("2_jhhwb")
+scene = "res://Assets/Dialing_app/watch_screen_calling.tscn"
+
+[node name="ContactApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Contacts"
+app_icon_img = ExtResource("3_4tfdd")
+scene = "res://Assets/Dialing_app/watch_screen_contacts.tscn"
+
+[node name="MessagesApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Messages"
+app_icon_img = ExtResource("4_plx2s")
+scene = "res://Assets/Message_app/watch_screen_texts.tscn"
+
+[node name="GalleryApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Gallery"
+app_icon_img = ExtResource("5_idqlo")
+scene = "res://Assets/Gallary_app/watch_screen_gallery.tscn"
+
+[node name="SettingsApp2" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
+layout_mode = 2
+size_flags_horizontal = 3
+app_name = "Settings"
+app_icon_img = ExtResource("6_7n3tr")
+scene = "res://Assets/Setting_app/watch_screen_settings.tscn"

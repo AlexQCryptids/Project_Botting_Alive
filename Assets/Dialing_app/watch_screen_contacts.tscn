@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://d300ur3y3xpnu"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_4p3ly"]
+[ext_resource type="Script" uid="uid://bymkp7ihlf0ap" path="res://Assets/Dialing_app/contacts_screen.gd" id="2_p7xxa"]
+[ext_resource type="PackedScene" uid="uid://dt4yum48xch12" path="res://templates/contact_template.tscn" id="3_gxaie"]
+[ext_resource type="Texture2D" uid="uid://bvwgh0r5w6qnh" path="res://Art/contact_images/abbondis_diner.png" id="4_hrxo3"]
+[ext_resource type="Texture2D" uid="uid://tgjg0e2f4ew7" path="res://Art/contact_images/bank.png" id="5_t5coa"]
+[ext_resource type="Texture2D" uid="uid://bkg58x65yxitp" path="res://Art/contact_images/ga_power.png" id="6_eh0en"]
+[ext_resource type="Texture2D" uid="uid://dutqlio6qlbvd" path="res://Art/contact_images/hospital.png" id="7_07gg0"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4p3ly")
+
+[node name="ContactsContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_right = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("2_p7xxa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContactsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Mom"
+number = "6780012578"
+
+[node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Collin"
+number = "6782216704"
+
+[node name="Restaurant" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Abondi's"
+number = "0703581654"
+callable = true
+contact_img = ExtResource("4_hrxo3")
+
+[node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Beth"
+number = "4408755218"
+
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Well's Fargo"
+number = "4047432740"
+callable = true
+contact_img = ExtResource("5_t5coa")
+
+[node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Dad"
+number = "6786315277"
+
+[node name="GeorgiaPower" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Georgia Power"
+number = "8886605810"
+contact_img = ExtResource("6_eh0en")
+
+[node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+cont_name = "Hospital"
+number = "8740031224"
+contact_img = ExtResource("7_07gg0")

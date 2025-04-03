@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://be1ybj4t2a8ko"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_l6jma"]
-[ext_resource type="Script" uid="uid://cjc48d4deh8f1" path="res://scripts/cutscreen.gd" id="2_1512w"]
+[ext_resource type="Script" uid="uid://cjc48d4deh8f1" path="res://Assets/Cut_scenes/cutscreen.gd" id="2_e1qsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcawi"]
 bg_color = Color(0, 0, 0, 0.537255)
@@ -56,7 +56,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_l6jma")
-script = ExtResource("2_1512w")
+script = ExtResource("2_e1qsw")
 
 [node name="BG" type="Panel" parent="."]
 layout_mode = 1
