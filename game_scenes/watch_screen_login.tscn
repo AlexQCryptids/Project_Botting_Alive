@@ -121,3 +121,4 @@ libraries = {
 }
 
 [connection signal="mouse_entered" from="FingerprintIcon" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="FingerprintIcon" to="." method="_on_fingerprint_icon_mouse_exited"]

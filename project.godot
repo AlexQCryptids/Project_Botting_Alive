@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Botting Alive"
-run/main_scene="uid://ck8wancf127j1"
+run/main_scene="uid://gigljbrx6307"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="res://rsc/BG_img1.png"
 config/icon="res://rsc/GameIcon.png"
@@ -23,6 +23,8 @@ Unlockable="*res://scripts/Unlockable.gd"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://rsc/img/mouse_icon4.png"
 

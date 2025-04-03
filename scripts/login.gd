@@ -23,7 +23,9 @@ func _process(_delta: float) -> void:
 	$Time.text = time_str
 
 
-
+'''
+todo: press the mouse the make it work
+'''
 func _on_texture_rect_mouse_entered() -> void:
 	$AnimationPlayer.play("fade_out")
 	$AudioStreamPlayer.play()

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://gigljbrx6307"]
 
-[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_bem6t"]
-[ext_resource type="Script" uid="uid://o7v158wwbbsc" path="res://scripts/main_menu.gd" id="2_eyc6t"]
-[ext_resource type="Texture2D" uid="uid://drqj5mebb4mu7" path="res://rsc/BG_img1.png" id="3_hgx2v"]
-[ext_resource type="AudioStream" uid="uid://c2vaw5fgrfk0k" path="res://audio/Themes/allora3-1-25.mp3" id="4_ncovw"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_a145x"]
+[ext_resource type="Script" uid="uid://o7v158wwbbsc" path="res://scripts/main_menu.gd" id="2_ceex1"]
+[ext_resource type="Texture2D" uid="uid://dnl8kj0jhudyb" path="res://rsc/cutscenes/opening/panel2.png" id="3_a145x"]
+[ext_resource type="AudioStream" uid="uid://c2vaw5fgrfk0k" path="res://audio/Themes/allora3-1-25.mp3" id="4_nwj8w"]
 
 [sub_resource type="Animation" id="Animation_vt5fv"]
 length = 1.5
@@ -45,22 +45,30 @@ _data = {
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.026
+anchor_right = 1.668
+anchor_bottom = 1.658
+offset_left = -47.92
+offset_top = -7.0
+offset_right = -171.56
+offset_bottom = -97.6401
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_bem6t")
-script = ExtResource("2_eyc6t")
+theme = ExtResource("1_a145x")
+script = ExtResource("2_ceex1")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.407
+anchor_bottom = 1.412
+offset_left = 16.0
+offset_top = 4.0
+offset_right = -2325.8
+offset_bottom = -1316.4
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_hgx2v")
+texture = ExtResource("3_a145x")
 
 [node name="text" type="Label" parent="Background"]
 layout_mode = 1
@@ -69,13 +77,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -98.0
-offset_right = 64.0
-offset_bottom = -71.0
+offset_left = -119.0
+offset_top = -157.0
+offset_right = 223.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_bem6t")
+theme = ExtResource("1_a145x")
+theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.572549, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.0941176)
 theme_override_constants/shadow_offset_y = 4
@@ -90,6 +99,6 @@ libraries = {
 autoplay = "RESET"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ncovw")
+stream = ExtResource("4_nwj8w")
 autoplay = true
 parameters/looping = false
