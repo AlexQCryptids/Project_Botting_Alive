@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://1s0li8bogwi0"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_3gu0y"]
+[ext_resource type="PackedScene" uid="uid://dm6c4ebqlkghn" path="res://templates/text_contact_template.tscn" id="2_p7yrn"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_3gu0y")
+
+[node name="ContactsContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_right = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContactsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+scene = "res://texts/text_scenes/MomText.tscn"
+cont_name = "Mom"
+
+[node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+scene = "res://texts/text_scenes/BethText.tscn"
+cont_name = "Beth"
+
+[node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+cont_name = "Collin"
+
+[node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+scene = "res://texts/text_scenes/BankText.tscn"
+cont_name = "Bank"
+
+[node name="Friend1" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+cont_name = "Alexis"
+
+[node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
+layout_mode = 2
+cont_name = "Dad"

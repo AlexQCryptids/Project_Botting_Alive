@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=3 uid="uid://dimpgmnerdshg"]
+
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_iworp"]
+[ext_resource type="Script" uid="uid://c2qqpwh5xvtgr" path="res://Assets/Watch_UI/login.gd" id="2_kicdn"]
+[ext_resource type="Texture2D" uid="uid://x0034qfk5pw8" path="res://Art/img/mouse_icon.png" id="3_dry3f"]
+[ext_resource type="AudioStream" uid="uid://dcrxjs8yngykh" path="res://Audio/SFX/loginSound3.wav" id="4_ua0ve"]
+
+[sub_resource type="Animation" id="Animation_063tc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FingerprintIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.9, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FingerprintIcon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bv0vr"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FingerprintIcon:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FingerprintIcon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.196078)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cyu0g"]
+_data = {
+&"RESET": SubResource("Animation_063tc"),
+&"fade_out": SubResource("Animation_bv0vr")
+}
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_iworp")
+script = ExtResource("2_kicdn")
+
+[node name="BG" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FingerprintIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = 74.0
+offset_right = 32.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 1)
+texture = ExtResource("3_dry3f")
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 242.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ua0ve")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cyu0g")
+}
+
+[connection signal="mouse_entered" from="FingerprintIcon" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="FingerprintIcon" to="." method="_on_fingerprint_icon_mouse_exited"]

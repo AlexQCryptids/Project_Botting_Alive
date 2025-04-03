@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c23bm2ik08jd5"]
-
-[ext_resource type="Script" uid="uid://ib2iygiaodc2" path="res://bots/bot_scripts/BankBot.gd" id="1_gld6p"]
-
-[node name="BankBot" type="AudioStreamPlayer"]
-bus = &"Bot"
-script = ExtResource("1_gld6p")
-
-[connection signal="finished" from="." to="." method="_on_finished"]
