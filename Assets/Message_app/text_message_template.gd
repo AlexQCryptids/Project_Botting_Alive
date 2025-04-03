@@ -5,8 +5,8 @@ extends Control
 @onready var text_time = $VBoxContainer/time
 @onready var text_img = $"VBoxContainer/TextureRect"
 
-@onready var reciever_img = preload("res://rsc/img/text_sprite1.png")
-@onready var sender_img = preload("res://rsc/img/text_sprite3.png")
+@onready var reciever_img = preload("res://Assets/Message_app/sprites/text_sprite1.png")
+@onready var sender_img = preload("res://Assets/Message_app/sprites/text_sprite1.png")
 
 	
 func set_time(time):
