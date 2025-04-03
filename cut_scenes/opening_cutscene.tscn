@@ -1,13 +1,13 @@
 [gd_scene load_steps=14 format=3 uid="uid://ck8wancf127j1"]
 
-[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_wqtx2"]
-[ext_resource type="Script" uid="uid://cjc48d4deh8f1" path="res://scripts/cutscreen.gd" id="2_n43oo"]
-[ext_resource type="Texture2D" uid="uid://27an1tmuf8j7" path="res://rsc/cutscenes/opening/panel0.png" id="3_wju47"]
-[ext_resource type="Texture2D" uid="uid://c1teuyrgvq0hx" path="res://rsc/cutscenes/opening/panel1.png" id="4_4i1j2"]
-[ext_resource type="Texture2D" uid="uid://bls1dqgdm1ye4" path="res://rsc/gallery_images/test_img1.png" id="4_pnuk8"]
-[ext_resource type="AudioStream" uid="uid://crei37o6o8ecq" path="res://audio/SFX/The Funny One.wav" id="5_bqog7"]
-[ext_resource type="Texture2D" uid="uid://dnl8kj0jhudyb" path="res://rsc/cutscenes/opening/panel2.png" id="5_hntj0"]
-[ext_resource type="Texture2D" uid="uid://cy0hl8xjnxxl0" path="res://rsc/cutscenes/opening/panel3.png" id="6_xabg0"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_njhm0"]
+[ext_resource type="Script" uid="uid://cjc48d4deh8f1" path="res://scripts/cutscreen.gd" id="2_atj06"]
+[ext_resource type="Texture2D" uid="uid://27an1tmuf8j7" path="res://rsc/cutscenes/opening/panel0.png" id="3_c0xpa"]
+[ext_resource type="Texture2D" uid="uid://c1teuyrgvq0hx" path="res://rsc/cutscenes/opening/panel1.png" id="4_hfe3c"]
+[ext_resource type="Texture2D" uid="uid://dnl8kj0jhudyb" path="res://rsc/cutscenes/opening/panel2.png" id="5_vrn0p"]
+[ext_resource type="Texture2D" uid="uid://cy0hl8xjnxxl0" path="res://rsc/cutscenes/opening/panel3.png" id="6_ljohp"]
+[ext_resource type="AudioStream" uid="uid://crei37o6o8ecq" path="res://audio/SFX/The Funny One.wav" id="7_5e26t"]
+[ext_resource type="Texture2D" uid="uid://bls1dqgdm1ye4" path="res://rsc/gallery_images/test_img1.png" id="8_6p07r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcawi"]
 bg_color = Color(0, 0, 0, 0.537255)
@@ -61,13 +61,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_wqtx2")
-script = ExtResource("2_n43oo")
-scenes = Array[Texture2D]([ExtResource("3_wju47"), ExtResource("4_4i1j2"), ExtResource("5_hntj0"), ExtResource("6_xabg0")])
+theme = ExtResource("1_njhm0")
+script = ExtResource("2_atj06")
+scenes = Array[Texture2D]([ExtResource("3_c0xpa"), ExtResource("4_hfe3c"), ExtResource("5_vrn0p"), ExtResource("6_ljohp")])
 lines = Array[String](["Can you just listen to me for once?", "No! You’re being ridiculous!", "God, you always do this.", "Because you say stupid shit and then act confused when I get mad, Beth!", "You’re only mad because you’re twisting my words. I’m trying to explain-", "There’s nothing to explain! I wanted tonight to go well and you had to go and ruin it.", "Ruin it– what are you even talking about?", "I just... God, I can’t deal with you right now.", "Where the hell are you going?!", "Let go of me!", "We’re going to talk, sit down!", "I’m serious..! I’m not staying here, l-let me go!", "You’re not leaving, just sit down and listen!", "I said let GO!", "Callie! Come back inside.", "No!", "I’m not asking.", "Come.", "I... I said no.", "What’s gotten into you?", "...", "Fine. Have it your way."])
 next_scene_line = Array[int]([2, 8, 14])
 speaker = Array[Color]([Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.45098, 0.807843, 1, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.321569, 0.913725, 0.501961, 1), Color(0.45098, 0.807843, 1, 1), Color(0.45098, 0.807843, 1, 1)])
-audio = ExtResource("5_bqog7")
+audio = ExtResource("7_5e26t")
 
 [node name="BG" type="Panel" parent="."]
 layout_mode = 1
@@ -78,13 +78,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Image" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_pnuk8")
+texture = ExtResource("8_6p07r")
 expand_mode = 1
 stretch_mode = 5
 
@@ -132,7 +133,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xr8eh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_bqog7")
+stream = ExtResource("7_5e26t")
 autoplay = true
 
 [node name="info" type="Label" parent="."]

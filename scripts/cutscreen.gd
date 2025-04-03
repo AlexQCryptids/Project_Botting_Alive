@@ -64,7 +64,7 @@ func _on_timer_timeout() -> void:
 func finished():
 	animation_player.play("fade_out")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file("res://ui_scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://game_scenes/main_screen.tscn")
 
 
 func _on_audio_stream_player_finished() -> void:
