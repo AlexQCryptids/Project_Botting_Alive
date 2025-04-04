@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://w0yw4yx31yuo"]
+
+[ext_resource type="Script" uid="uid://bp03sl7k5jiu6" path="res://Assets/Dialing_app/call_screen.gd" id="1_8em1u"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="2_jbuk2"]
+[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://audio/SFX/clickSound.wav" id="3_uk8xe"]
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="CallScreen" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(150, 180)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_8em1u")
+
+[node name="CurNum" type="Label" parent="CallScreen"]
+custom_minimum_size = Vector2(100, 70)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+theme = ExtResource("2_jbuk2")
+theme_override_constants/line_spacing = -50
+theme_override_font_sizes/font_size = 30
+text = "
+9990"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="GridContainer" type="GridContainer" parent="CallScreen"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_jbuk2")
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="BeepPlayer" type="AudioStreamPlayer" parent="CallScreen/GridContainer"]
+stream = ExtResource("3_uk8xe")
+bus = &"SFX"
