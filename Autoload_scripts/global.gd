@@ -11,6 +11,7 @@ var battery = 5
 var last_scene = ["res://Assets/Watch_UI/watch_screen_login.tscn"]
 var cur_num = ""
 var cur_num_seq = []
+var cur_calling_transition_name = ""
 
 '''Change this please like why there are global'''
 
@@ -40,3 +41,6 @@ func reset_current_call():
 	
 func set_no_caller(seq):
 	set_current_call("0",seq)
+
+func set_current_call_transition_name(name):
+	cur_calling_transition_name = name

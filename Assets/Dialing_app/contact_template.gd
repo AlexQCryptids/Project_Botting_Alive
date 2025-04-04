@@ -39,4 +39,5 @@ func _on_pressed() -> void:
 		Global.set_current_call(contact_number.text,contact_sequence)
 	else:
 		Global.set_no_caller(contact_sequence)
-	Global.swap_scene("res://game_scenes/watch_screen_contacts.tscn","res://game_scenes/watch_screen_calling.tscn")
+	Global.set_current_call_transition_name(cont_name)
+	Global.swap_scene("res://Assets/Dialing_app/watch_screen_contacts.tscn","res://Assets/Dialing_app/watch_screen_calling_transition.tscn")
