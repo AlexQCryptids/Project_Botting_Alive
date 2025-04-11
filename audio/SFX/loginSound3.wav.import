@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcrxjs8yngykh"
-path="res://.godot/imported/loginSound3.wav-b83f81d21ae2b8c700331fbb92df4511.sample"
+path="res://.godot/imported/loginSound3.wav-974f635bdfe9d6aa13ab2347707ad537.sample"
 
 [deps]
 
-source_file="res://Audio/SFX/loginSound3.wav"
-dest_files=["res://.godot/imported/loginSound3.wav-b83f81d21ae2b8c700331fbb92df4511.sample"]
+source_file="res://audio/SFX/loginSound3.wav"
+dest_files=["res://.godot/imported/loginSound3.wav-974f635bdfe9d6aa13ab2347707ad537.sample"]
 
 [params]
 

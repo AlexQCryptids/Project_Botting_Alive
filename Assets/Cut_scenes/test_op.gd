@@ -5,7 +5,7 @@ extends Node2D
 var shake_strength: float = 0.0
 var DECAY_RATE: float = 5.0
 
-
+'''
 # following are for the camera shaking
 func apply_shake():
 	shake_strength = 10
@@ -19,3 +19,4 @@ func get_random_offset() -> Vector2:
 		randf_range(-shake_strength, shake_strength),
 		randf_range(-shake_strength, shake_strength)
 	)
+'''

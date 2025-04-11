@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b88p4vgg62gsx"
-path="res://.godot/imported/financial_management.mp3-615cfa66accb3ab7f9a1ae026fc39c2b.mp3str"
+path="res://.godot/imported/financial_management.mp3-ea5b6d3d53c2ee21c94aee4f231e53e3.mp3str"
 
 [deps]
 
-source_file="res://Audio/BankBot/financial_management.mp3"
-dest_files=["res://.godot/imported/financial_management.mp3-615cfa66accb3ab7f9a1ae026fc39c2b.mp3str"]
+source_file="res://audio/BankBot/financial_management.mp3"
+dest_files=["res://.godot/imported/financial_management.mp3-ea5b6d3d53c2ee21c94aee4f231e53e3.mp3str"]
 
 [params]
 
