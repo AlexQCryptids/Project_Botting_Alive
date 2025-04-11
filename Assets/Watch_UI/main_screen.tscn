@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" uid="uid://dsj78wq7savqf" path="res://Assets/Watch_UI/main_game.gd" id="1_3aurv"]
-[ext_resource type="Texture2D" uid="uid://dousufjnfy2if" path="res://Art/img/main_background.png" id="1_pi3nr"]
 [ext_resource type="Texture2D" uid="uid://dd7cqi0bty0vf" path="res://Art/img/arm2.png" id="3_5kjjl"]
 [ext_resource type="Texture2D" uid="uid://b2kl88g22sefx" path="res://Art/img/watch_overlay.png" id="3_6j81m"]
+[ext_resource type="Texture2D" uid="uid://ccp2ewfmmsb8t" path="res://Art/img/coffin_temp_bright.png" id="3_imwmw"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="4_fgoog"]
 [ext_resource type="Script" uid="uid://de5i54e4yiey1" path="res://Assets/Watch_UI/watch_ui.gd" id="5_jf44g"]
 [ext_resource type="Script" uid="uid://oy8dvd6g3eek" path="res://Assets/Watch_UI/timers.gd" id="5_k45j3"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://Assets/Watch_UI/watch_screen_login.tscn" id="8_rmo7q"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://Art/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://Art/img/watch_knob.png" id="10_rfeen"]
-[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://Audio/SFX/backBtnSound.wav" id="11_v11kl"]
+[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://audio/SFX/backBtnSound.wav" id="11_v11kl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)
@@ -35,9 +35,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_pi3nr")
+texture = ExtResource("3_imwmw")
 
 [node name="Hand" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

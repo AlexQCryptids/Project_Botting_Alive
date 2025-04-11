@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dv6pa1gp7r7qa"]
 
 [ext_resource type="Script" uid="uid://b4mxxpesc8lhs" path="res://Assets/Cut_scenes/test_op.gd" id="1_6amre"]
-[ext_resource type="Texture2D" uid="uid://c5bl7ssd5yb7k" path="res://Assets/Cut_scenes/opening_rsc/panel0.png" id="1_gnc1s"]
 [ext_resource type="Texture2D" uid="uid://4a5exdcsdnmr" path="res://Assets/Cut_scenes/opening_rsc/incoming_call_temp.png" id="1_l7y5n"]
+[ext_resource type="Texture2D" uid="uid://clpuvppedfgwc" path="res://Art/img/coffin_temp.png" id="2_6amre"]
 [ext_resource type="Texture2D" uid="uid://dyop3g8em18pk" path="res://Assets/Cut_scenes/opening_rsc/panel3.png" id="3_5ap8e"]
 [ext_resource type="Texture2D" uid="uid://d01eldw8hy481" path="res://Assets/Cut_scenes/opening_rsc/panel1.png" id="4_6amre"]
 [ext_resource type="Script" uid="uid://3tx350p502l3" path="res://Assets/Cut_scenes/incoming_call_temp.gd" id="4_7wsfp"]
@@ -70,8 +70,9 @@ libraries = {
 }
 
 [node name="blackout" type="Sprite2D" parent="."]
-position = Vector2(963, 552)
-texture = ExtResource("1_gnc1s")
+position = Vector2(964.5, 561)
+scale = Vector2(1.22461, 1.04883)
+texture = ExtResource("2_6amre")
 
 [node name="IncomingCallTemp" type="Sprite2D" parent="."]
 position = Vector2(948, 548)
