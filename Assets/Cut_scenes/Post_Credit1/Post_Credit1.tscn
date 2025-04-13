@@ -1,0 +1,280 @@
+[gd_scene load_steps=10 format=3 uid="uid://dulgn1ovs1b38"]
+
+[ext_resource type="AudioStream" uid="uid://bn8xdsfacxvjm" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/Dedecus Mixed v2.mp3" id="1_sg2em"]
+[ext_resource type="Texture2D" uid="uid://ca7b4bqab62hj" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/blackout.png" id="2_6no38"]
+
+[sub_resource type="FontVariation" id="FontVariation_jlpdl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dimpg"]
+font = SubResource("FontVariation_jlpdl")
+font_size = 66
+
+[sub_resource type="Animation" id="Animation_7r6l3"]
+resource_name = "PC1"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.56667, 6.64951),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(6.64951, 11.3333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(11.3, 19.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(19.3, 36.5784),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(36.6096, 48.1572),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(48.1572),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_cuhcl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("6:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yishm"]
+_data = {
+&"PC1": SubResource("Animation_7r6l3"),
+&"RESET": SubResource("Animation_cuhcl")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_0x7h0"]
+font_weight = 525
+
+[sub_resource type="Theme" id="Theme_uj2tm"]
+default_font = SubResource("SystemFont_0x7h0")
+
+[node name="PostCredit1" type="Node2D"]
+
+[node name="6" type="Label" parent="."]
+offset_left = 393.0
+offset_top = 506.0
+offset_right = 1938.0
+offset_bottom = 1008.0
+text = "Thank you for playing our game!"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="5" type="Label" parent="."]
+offset_left = 198.0
+offset_top = 387.0
+offset_right = 1821.0
+offset_bottom = 666.0
+text = "If you are interested in our summer online playtest
+
+                 please scan the QR code!"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="4" type="Label" parent="."]
+offset_left = 421.0
+offset_top = 430.0
+offset_right = 1524.0
+offset_bottom = 709.0
+text = "              Wanna try again?
+
+You might save the person buried alive"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="1" type="Label" parent="."]
+offset_left = 606.0
+offset_top = 404.0
+offset_right = 1612.0
+offset_bottom = 683.0
+text = "    Botting Alive
+
+   a VGDev Game"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="3" type="Label" parent="."]
+offset_left = 447.0
+offset_top = 420.0
+offset_right = 1550.0
+offset_bottom = 699.0
+text = "You died from an unknown person
+
+Because of the lack of information"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="2" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 422.0
+offset_right = 1462.0
+offset_bottom = 701.0
+text = "A Story about Callie and Beth"
+label_settings = SubResource("LabelSettings_dimpg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_sg2em")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -7
+position = Vector2(960, 546)
+texture = ExtResource("2_6no38")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yishm")
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 375.0
+offset_top = 245.0
+offset_right = 1606.0
+offset_bottom = 744.0
+theme = SubResource("Theme_uj2tm")
+text = " Botting Alive
+
+a VGDev Game"
+tab_size = 5

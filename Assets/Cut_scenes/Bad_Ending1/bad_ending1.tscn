@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=3 uid="uid://ca2nkuadqx5dl"]
+
+[ext_resource type="Texture2D" uid="uid://0fnxx73kj1yl" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/coffin_temp.png" id="1_m44b8"]
+[ext_resource type="Texture2D" uid="uid://cmgl1wtlx2j61" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/BE_1_panel3.jpg" id="2_v4c6o"]
+[ext_resource type="Texture2D" uid="uid://c5bl7ssd5yb7k" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/blackout.png" id="3_6ru3t"]
+[ext_resource type="AudioStream" uid="uid://cca2b1bffuxr5" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/Bad Ending Scence.mp3" id="4_o2xc8"]
+[ext_resource type="AudioStream" uid="uid://b6bfmlh2j1rn1" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/Gunshot.mp3" id="5_17v8j"]
+[ext_resource type="AudioStream" uid="uid://mgfv5aaf42ur" path="res://Assets/Cut_scenes/Bad_Ending1/BE1_rsc/sorry callie.mp3" id="6_xv4yj"]
+
+[sub_resource type="Animation" id="Animation_6j5xq"]
+resource_name = "BE1"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coffin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("panel3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.076, 16.8333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BE1_SFX:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 24.994, 36.2475),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collin:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(25.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_kuvdt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coffin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("panel3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BE1_SFX:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collin:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1j08p"]
+_data = {
+&"BE1": SubResource("Animation_6j5xq"),
+&"RESET": SubResource("Animation_kuvdt")
+}
+
+[node name="BadEnding1" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1j08p")
+}
+
+[node name="coffin" type="Sprite2D" parent="."]
+position = Vector2(959, 543)
+scale = Vector2(1.2487, 1.05664)
+texture = ExtResource("1_m44b8")
+
+[node name="panel3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(960.25, 546.25)
+scale = Vector2(1.02394, 1.04722)
+texture = ExtResource("2_v4c6o")
+
+[node name="blackout" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(958, 544)
+texture = ExtResource("3_6ru3t")
+
+[node name="BE1_SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o2xc8")
+
+[node name="Gunshot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_17v8j")
+
+[node name="Collin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_xv4yj")
