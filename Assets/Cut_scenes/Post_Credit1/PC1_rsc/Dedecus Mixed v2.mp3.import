@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn8xdsfacxvjm"
+path="res://.godot/imported/Dedecus Mixed v2.mp3-b052aff707a33dd8d8bfb9e6e5dc6737.mp3str"
+
+[deps]
+
+source_file="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/Dedecus Mixed v2.mp3"
+dest_files=["res://.godot/imported/Dedecus Mixed v2.mp3-b052aff707a33dd8d8bfb9e6e5dc6737.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

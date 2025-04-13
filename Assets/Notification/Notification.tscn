@@ -18,7 +18,7 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 87.0
 offset_bottom = 33.0
-text = "Notif Title"
+text = "Alexis Choi"
 label_settings = ExtResource("1_3sf8d")
 
 [node name="Subtitle" type="Label" parent="."]
@@ -27,5 +27,6 @@ offset_left = 10.0
 offset_top = 50.0
 offset_right = 171.0
 offset_bottom = 76.0
-text = "Notif Title"
+text = "Hey Callie! just want to say sorry... 
+the dress last week, i don't really mean it"
 label_settings = ExtResource("2_jensu")

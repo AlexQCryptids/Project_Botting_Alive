@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyop3g8em18pk"
-path="res://.godot/imported/panel3.png-41858e1ce4bfec63f2e371e06b670b56.ctex"
+uid="uid://ca7b4bqab62hj"
+path="res://.godot/imported/blackout.png-b25c6843dd42075e11e584d36ec698fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cut_scenes/opening_rsc/panel3.png"
-dest_files=["res://.godot/imported/panel3.png-41858e1ce4bfec63f2e371e06b670b56.ctex"]
+source_file="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/blackout.png"
+dest_files=["res://.godot/imported/blackout.png-b25c6843dd42075e11e584d36ec698fa.ctex"]
 
 [params]
 
