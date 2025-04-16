@@ -5,7 +5,6 @@ func _ready() -> void:
 	add_date("03/06/2025")
 	add_text("1:24 pm",true,"""Guess where I sent this from??""")
 	
-	add_date("03/03/2025")
 	add_text("1:24 pm",false,"""The watch!!! Cal, you’re actually wearing it for real!""")
 	
 	add_date("03/03/2025")

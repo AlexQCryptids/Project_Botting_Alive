@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsa3sd6lu44bv"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_qvtia"]
-[ext_resource type="Script" uid="uid://gt1udg4pvm8m" path="res://Assets/Message_app/Beth_Text.gd" id="2_qvtia"]
+[ext_resource type="Script" uid="uid://gt1udg4pvm8m" path="res://Assets/Message_app/text_scenes/Beth_Text.gd" id="2_qvtia"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
