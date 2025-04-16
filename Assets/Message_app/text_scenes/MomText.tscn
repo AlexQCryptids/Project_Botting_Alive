@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bl72bnstbkx53"]
 
-[ext_resource type="Script" uid="uid://dd5qjc8vgmxf2" path="res://Assets/Message_app/mom_text.gd" id="1_u7maq"]
+[ext_resource type="Script" uid="uid://dd5qjc8vgmxf2" path="res://Assets/Message_app/text_scenes/mom_text.gd" id="1_u7maq"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3

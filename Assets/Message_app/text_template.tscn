@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://3bu8j54kjvfa"]
 
-[ext_resource type="Script" uid="uid://eku5ast3apds" path="res://Assets/Message_app/Text.gd" id="1_cl8hb"]
+[ext_resource type="Script" uid="uid://eku5ast3apds" path="res://Assets/Message_app/text_scenes/Text.gd" id="1_cl8hb"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3

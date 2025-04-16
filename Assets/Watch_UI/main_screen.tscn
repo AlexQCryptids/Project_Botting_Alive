@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=15 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" uid="uid://dsj78wq7savqf" path="res://Assets/Watch_UI/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dd7cqi0bty0vf" path="res://Art/img/arm2.png" id="3_5kjjl"]
-[ext_resource type="Texture2D" uid="uid://b2kl88g22sefx" path="res://Art/img/watch_overlay.png" id="3_6j81m"]
-[ext_resource type="Texture2D" uid="uid://ccp2ewfmmsb8t" path="res://Art/img/coffin_temp_bright.png" id="3_imwmw"]
+[ext_resource type="Texture2D" uid="uid://clpuvppedfgwc" path="res://Art/img/coffin_temp.png" id="3_imwmw"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="4_fgoog"]
+[ext_resource type="Texture2D" uid="uid://c31nlug2ywrto" path="res://Art/img/watch_pixel_temp.png" id="5_03ug6"]
 [ext_resource type="Script" uid="uid://de5i54e4yiey1" path="res://Assets/Watch_UI/watch_ui.gd" id="5_jf44g"]
 [ext_resource type="Script" uid="uid://oy8dvd6g3eek" path="res://Assets/Watch_UI/timers.gd" id="5_k45j3"]
 [ext_resource type="PackedScene" uid="uid://c5aukekuebpv1" path="res://Assets/Notification/Notification.tscn" id="8_imwmw"]
@@ -19,12 +19,6 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_imwmw"]
-font_size = 17
-font_color = Color(0.07, 0.0651, 0.07, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_03ug6"]
-font_size = 27
-font_color = Color(0.883027, 0.379583, 0.497528, 1)
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -35,15 +29,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_fgoog")
 script = ExtResource("1_3aurv")
-
-[node name="Notification" parent="." instance=ExtResource("8_imwmw")]
-visible = false
-z_index = 2
-layout_mode = 1
-offset_left = 728.0
-offset_top = 543.0
-offset_right = -803.0
-offset_bottom = 626.0
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -65,30 +50,31 @@ grow_vertical = 2
 texture = ExtResource("3_5kjjl")
 
 [node name="WatchOverlay" type="TextureRect" parent="."]
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -197.0
-offset_top = -184.0
-offset_right = 324.0
-offset_bottom = 94.0
+offset_left = 435.0
+offset_top = 114.0
+offset_right = -617.0
+offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_6j81m")
+texture = ExtResource("5_03ug6")
 expand_mode = 1
 
 [node name="BackButton" type="Button" parent="WatchOverlay"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.562
+anchor_left = 0.592
 anchor_top = 0.55
-anchor_right = 0.562
-anchor_bottom = 0.55
-offset_left = 0.773926
-offset_top = -40.3
-offset_right = 25.7739
-offset_bottom = 40.7
+anchor_right = 0.592
+anchor_bottom = 0.598
+offset_left = 261.144
+offset_top = -258.25
+offset_right = 344.144
+offset_bottom = -180.29
 mouse_filter = 1
 icon = ExtResource("10_rfeen")
 flat = true
@@ -101,10 +87,10 @@ anchor_left = 0.363
 anchor_top = 0.362
 anchor_right = 0.552
 anchor_bottom = 0.756
-offset_left = 2.70099
-offset_top = -0.212006
-offset_right = -0.496094
-offset_bottom = -14.056
+offset_left = -191.084
+offset_top = -273.51
+offset_right = 244.864
+offset_bottom = 112.62
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -114,10 +100,10 @@ anchors_preset = -1
 anchor_top = -0.013
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -0.436999
-offset_right = 4.00012
-offset_bottom = 11.0
+offset_left = 4.0
+offset_top = 73.399
+offset_right = 11.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_fgoog")
@@ -132,7 +118,7 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 
 [node name="UIBG" type="Panel" parent="WatchOverlay/Main/Panel/VBoxContainer"]
-custom_minimum_size = Vector2(320, 25)
+custom_minimum_size = Vector2(320, 40)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nmlg0")
@@ -141,7 +127,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_nmlg0")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_bottom = 30.0
 grow_horizontal = 2
 script = ExtResource("5_jf44g")
 panel = NodePath("../../..")
@@ -153,6 +139,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 10
 text = "00:00"
+label_settings = SubResource("LabelSettings_imwmw")
 horizontal_alignment = 1
 
 [node name="Screen" type="Control" parent="WatchOverlay/Main/Panel/VBoxContainer" groups=["SceneLoader"]]
@@ -161,20 +148,31 @@ size_flags_vertical = 3
 
 [node name="Login" parent="WatchOverlay/Main/Panel/VBoxContainer/Screen" instance=ExtResource("8_rmo7q")]
 layout_mode = 1
+offset_left = -4.0
+offset_top = -41.0
+offset_right = 4.0
+offset_bottom = -7.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="brightness_mask" type="ColorRect" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.811765)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 4.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.627451)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(679, 469)
+visible = false
+position = Vector2(872, 591)
+scale = Vector2(1.66857, 1.90857)
 energy = 1.3
 blend_mode = 2
 texture = ExtResource("10_3tfo2")
@@ -188,33 +186,6 @@ autostart = true
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_v11kl")
 bus = &"SFX"
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 703.0
-offset_top = 518.0
-offset_right = 1139.0
-offset_bottom = 627.0
-color = Color(0.955318, 0.867149, 0.890077, 1)
-
-[node name="Label" type="Label" parent="ColorRect2"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 58.0
-offset_right = 628.0
-offset_bottom = 231.0
-text = "Hey Callie, just wanna say sorry"
-label_settings = SubResource("LabelSettings_imwmw")
-
-[node name="Label2" type="Label" parent="ColorRect2"]
-layout_mode = 0
-offset_left = 29.0
-offset_top = 4.0
-offset_right = 222.0
-offset_bottom = 47.0
-text = "Alexis Choi"
-label_settings = SubResource("LabelSettings_03ug6")
 
 [connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]

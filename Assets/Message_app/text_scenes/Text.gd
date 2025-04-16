@@ -2,12 +2,12 @@ extends Control
 
 class_name Text
 
-var message_template = load("res://Assets/Message_app/text_message_template.tscn")
+var message_template = load("res://Assets/Message_app/text_scenes/text_message_template.tscn")
 
 @onready var parent = $ScrollContainer/VBoxContainer
 
 func add_text(time, receiver, msg_text):
-	var cur_msg = load("res://Assets/Message_app/text_message_template.tscn").instantiate()
+	var cur_msg = load("res://Assets/Message_app/text_scenes/text_message_template.tscn").instantiate()
 	parent.add_child(cur_msg)
 	cur_msg.set_time(time)
 	cur_msg.set_message(msg_text)

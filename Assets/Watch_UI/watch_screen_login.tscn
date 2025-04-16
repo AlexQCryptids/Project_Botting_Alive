@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dimpgmnerdshg"]
+[gd_scene load_steps=9 format=3 uid="uid://dimpgmnerdshg"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_iworp"]
 [ext_resource type="Script" uid="uid://c2qqpwh5xvtgr" path="res://Assets/Watch_UI/login.gd" id="2_kicdn"]
@@ -66,6 +66,9 @@ _data = {
 &"fade_out": SubResource("Animation_bv0vr")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_77pwl"]
+font_size = 29
+
 [node name="LoginScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -87,15 +90,15 @@ grow_vertical = 2
 
 [node name="FingerprintIcon" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = 74.0
-offset_right = 32.0
-offset_bottom = 138.0
+anchors_preset = -1
+anchor_left = 0.507
+anchor_top = 0.725
+anchor_right = 0.507
+anchor_bottom = 0.725
+offset_left = -75.44
+offset_top = -79.0
+offset_right = 51.5599
+offset_bottom = 47.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9, 1)
@@ -119,6 +122,20 @@ stream = ExtResource("4_ua0ve")
 libraries = {
 &"": SubResource("AnimationLibrary_cyu0g")
 }
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.475
+anchor_right = 0.543
+anchor_bottom = 0.475
+offset_left = -231.68
+offset_top = -59.0
+offset_right = 220.44
+offset_bottom = 16.0
+text = "Unlock with Fingerprint"
+label_settings = SubResource("LabelSettings_77pwl")
 
 [connection signal="mouse_entered" from="FingerprintIcon" to="." method="_on_texture_rect_mouse_entered"]
 [connection signal="mouse_exited" from="FingerprintIcon" to="." method="_on_fingerprint_icon_mouse_exited"]
