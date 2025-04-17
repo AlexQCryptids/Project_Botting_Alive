@@ -34,12 +34,12 @@ theme_override_constants/separation = 5
 
 [node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_scenes/MomText.tscn"
+scene = "res://Assets/Message_app/text_scenes/individuals/MomText.tscn"
 cont_name = "Mom"
 
 [node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_scenes/BethText.tscn"
+scene = "res://Assets/Message_app/text_scenes/individuals/BethText.tscn"
 cont_name = "Beth"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
@@ -49,7 +49,7 @@ cont_name = "Collin"
 
 [node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]
 layout_mode = 2
-scene = "res://Assets/Message_app/text_scenes/BankText.tscn"
+scene = "res://Assets/Message_app/text_scenes/individuals/BankText.tscn"
 cont_name = "Bank"
 
 [node name="Friend1" parent="ContactsContainer/VBoxContainer" instance=ExtResource("2_p7yrn")]

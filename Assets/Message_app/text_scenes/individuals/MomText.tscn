@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsa3sd6lu44bv"]
+[gd_scene load_steps=2 format=3 uid="uid://bl72bnstbkx53"]
 
-[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_qvtia"]
-[ext_resource type="Script" uid="uid://gt1udg4pvm8m" path="res://Assets/Message_app/text_scenes/Beth_Text.gd" id="2_qvtia"]
+[ext_resource type="Script" uid="uid://dd5qjc8vgmxf2" path="res://Assets/Message_app/text_scenes/individuals/mom_text.gd" id="1_exyx3"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -11,8 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-theme = ExtResource("1_qvtia")
-script = ExtResource("2_qvtia")
+script = ExtResource("1_exyx3")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -30,3 +28,4 @@ vertical_scroll_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 40

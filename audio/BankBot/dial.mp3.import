@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cqv4hwj4o1ec3"
-path="res://.godot/imported/dial.mp3-90a07c64b8b3c0a7ba3fad0407cd7925.mp3str"
+path="res://.godot/imported/dial.mp3-3b33980148ecc985b0aa178b34193718.mp3str"
 
 [deps]
 
-source_file="res://audio/BankBot/dial.mp3"
-dest_files=["res://.godot/imported/dial.mp3-90a07c64b8b3c0a7ba3fad0407cd7925.mp3str"]
+source_file="res://Audio/BankBot/dial.mp3"
+dest_files=["res://.godot/imported/dial.mp3-3b33980148ecc985b0aa178b34193718.mp3str"]
 
 [params]
 
