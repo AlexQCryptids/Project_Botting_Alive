@@ -44,7 +44,7 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Mom"
-number = "6780012578"
+number = "0"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
 custom_minimum_size = Vector2(300, 75)
@@ -52,7 +52,7 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Collin"
-number = "6782216704"
+number = "0"
 
 [node name="Restaurant" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
 custom_minimum_size = Vector2(300, 75)
@@ -70,7 +70,7 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Beth"
-number = "4408755218"
+number = "0"
 
 [node name="Bank" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
 custom_minimum_size = Vector2(300, 75)
@@ -88,7 +88,7 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Dad"
-number = "6786315277"
+number = "0"
 
 [node name="GeorgiaPower" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
 custom_minimum_size = Vector2(300, 75)
@@ -96,7 +96,7 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Georgia Power"
-number = "8886605810"
+number = "0"
 contact_img = ExtResource("6_eh0en")
 
 [node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
@@ -105,5 +105,5 @@ layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
 cont_name = "Hospital"
-number = "8740031224"
+number = "0"
 contact_img = ExtResource("7_07gg0")

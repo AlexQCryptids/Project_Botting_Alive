@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dimpgmnerdshg" path="res://Assets/Watch_UI/watch_screen_login.tscn" id="8_rmo7q"]
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://Art/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://Art/img/watch_knob.png" id="10_rfeen"]
-[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://Audio/SFX/backBtnSound.wav" id="11_v11kl"]
+[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://audio/SFX/backBtnSound.wav" id="11_v11kl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)

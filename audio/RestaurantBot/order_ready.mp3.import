@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://7hu3ohqxrv07"
-path="res://.godot/imported/order_ready.mp3-e9900148dc320af1fb539fe22a0d2183.mp3str"
+path="res://.godot/imported/order_ready.mp3-8a4570aded009097ac2c6650f749b13c.mp3str"
 
 [deps]
 
-source_file="res://Audio/RestaurantBot/order_ready.mp3"
-dest_files=["res://.godot/imported/order_ready.mp3-e9900148dc320af1fb539fe22a0d2183.mp3str"]
+source_file="res://audio/RestaurantBot/order_ready.mp3"
+dest_files=["res://.godot/imported/order_ready.mp3-8a4570aded009097ac2c6650f749b13c.mp3str"]
 
 [params]
 
