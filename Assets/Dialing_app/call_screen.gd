@@ -3,30 +3,24 @@ extends VBoxContainer
 @onready var beep_player = $GridContainer/BeepPlayer
 @onready var cur_num = $CurNum
 
-
-var number_sequence = Global.cur_num_seq
+var number_sequence = Dialing_Global.cur_num_seq
+var number_text = Dialing_Global.cur_num
 
 var cur_bot = null
 
-
 func _ready() -> void:
-	cur_num.text = ""
+	# the numer you show is based on sequence
+	cur_num.text = ",".join(number_sequence.map(func(x): return str(x))).replace(",", "")
 	# Connect button signals
 	for button in $GridContainer.get_children():
 		if button.is_in_group("NumBtn"):
 			button.connect("pressed", Callable(self, "_on_button_pressed_dial").bind((button.name.to_int())))
-
-	load_bot()
-
+	load_bot() # connect bots based on the number (text, not seq) 
 
 func load_bot():
-	cur_bot = load(Global.all_bots[Global.cur_num]).instantiate()
+	cur_bot = load(Dialing_Global.all_bots[number_text]).instantiate()
 	self.add_child(cur_bot)
 
-	#var num = ""
-	#for i in Global.cur_num_seq:
-	#	num += str(i)
-	#cur_num.text = num #Global.cur_num #Show what number you're calling
 
 func _on_button_pressed_dial(value):
 
@@ -48,5 +42,6 @@ func _on_button_pressed_dial(value):
 
 func _on_button_hang_pressed() -> void:
 	beep_player.play()
-	Global.reset_current_call()
+	Dialing_Global.reset_current_call() 
+	# well change it
 	Global.change_scene("res://Assets/Dialing_app/watch_screen_dialing.tscn")

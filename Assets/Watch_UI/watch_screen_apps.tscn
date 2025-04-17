@@ -40,7 +40,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 app_name = "Phone"
 app_icon_img = ExtResource("2_jhhwb")
-scene = "res://Assets/Dialing_app/watch_screen_calling.tscn"
+scene = "res://Assets/Dialing_app/watch_screen_dialing.tscn"
 
 [node name="ContactApp" parent="ScrollContainer/AppContainer" instance=ExtResource("1_ue5s6")]
 layout_mode = 2

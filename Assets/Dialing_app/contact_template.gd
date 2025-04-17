@@ -36,8 +36,8 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	$AudioStreamPlayer.play()
 	if callable:
-		Global.set_current_call(contact_number.text,contact_sequence)
+		Dialing_Global.set_current_call(contact_number.text,contact_sequence)
 	else:
-		Global.set_no_caller(contact_sequence)
-	Global.set_current_call_transition_name(cont_name)
-	Global.swap_scene("res://Assets/Dialing_app/watch_screen_contacts.tscn","res://Assets/Dialing_app/watch_screen_calling_transition.tscn")
+		Dialing_Global.set_no_caller(contact_sequence)
+	Dialing_Global.set_current_call_transition_name(cont_name)
+	Global.swap_scene("res://Assets/Dialing_app/watch_screen_contacts.tscn","res://Assets/Dialing_app/watch_screen_calling.tscn")

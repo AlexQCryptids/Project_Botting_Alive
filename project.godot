@@ -18,8 +18,9 @@ config/icon="res://Art/GameIcon.png"
 
 [autoload]
 
-Global="*res://Autoload_scripts/global.gd"
+Global="*res://Autoload_scripts/Global.gd"
 Unlockable="*res://Autoload_scripts/Unlockable.gd"
+Dialing_Global="*res://Autoload_scripts/Dialing_Global.gd"
 
 [display]
 
