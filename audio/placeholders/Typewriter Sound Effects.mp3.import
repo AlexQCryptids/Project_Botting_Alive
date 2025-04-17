@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b6p10nlk4b0a7"
-path="res://.godot/imported/Typewriter Sound Effects.mp3-3448c3b4ac781fce4060d34c14c4cebb.mp3str"
+path="res://.godot/imported/Typewriter Sound Effects.mp3-5db3fce2e77694afc8eb09518a59965d.mp3str"
 
 [deps]
 
-source_file="res://audio/placeholders/Typewriter Sound Effects.mp3"
-dest_files=["res://.godot/imported/Typewriter Sound Effects.mp3-3448c3b4ac781fce4060d34c14c4cebb.mp3str"]
+source_file="res://Audio/placeholders/Typewriter Sound Effects.mp3"
+dest_files=["res://.godot/imported/Typewriter Sound Effects.mp3-5db3fce2e77694afc8eb09518a59965d.mp3str"]
 
 [params]
 

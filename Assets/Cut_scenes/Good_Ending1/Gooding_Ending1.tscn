@@ -1,0 +1,196 @@
+[gd_scene load_steps=10 format=3 uid="uid://ba145u0rinaq7"]
+
+[ext_resource type="Texture2D" uid="uid://bknomwuxmbwe3" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel1.jpg" id="1_dmfxp"]
+[ext_resource type="Texture2D" uid="uid://d0smaxiir3xrn" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel2.jpg" id="2_6nj8q"]
+[ext_resource type="Texture2D" uid="uid://cjmncetv7yoi4" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel3.png" id="3_mgj3r"]
+[ext_resource type="Texture2D" uid="uid://cmb4l8eubb5x5" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE1_panel4.png" id="4_j6x8m"]
+[ext_resource type="AudioStream" uid="uid://q76ct5aclf7x" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/Good Ending Mixed.mp3" id="5_2g1v0"]
+[ext_resource type="AudioStream" uid="uid://daaf56fcyy1ei" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/Beth.mp3" id="6_4viyt"]
+
+[sub_resource type="Animation" id="Animation_6ewdp"]
+resource_name = "GE1"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beth?:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7.16555),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("panel2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(13.4501),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("panel1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 13.4667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("panel3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(24.7333, 34.5432),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("panel4:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(34.5764),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_old4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beth?:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("panel2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("panel1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("panel3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("panel4:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxg5a"]
+_data = {
+&"GE1": SubResource("Animation_6ewdp"),
+&"RESET": SubResource("Animation_old4m")
+}
+
+[node name="GoodingEnding1" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qxg5a")
+}
+
+[node name="panel1" type="Sprite2D" parent="."]
+position = Vector2(985, 532)
+texture = ExtResource("1_dmfxp")
+
+[node name="panel2" type="Sprite2D" parent="."]
+position = Vector2(965, 533)
+texture = ExtResource("2_6nj8q")
+
+[node name="panel3" type="Sprite2D" parent="."]
+position = Vector2(943, 536)
+texture = ExtResource("3_mgj3r")
+
+[node name="panel4" type="Sprite2D" parent="."]
+position = Vector2(953, 532)
+texture = ExtResource("4_j6x8m")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2g1v0")
+
+[node name="Beth?" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4viyt")
+volume_db = -1.0
+pitch_scale = 1.05

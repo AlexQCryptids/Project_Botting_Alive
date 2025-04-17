@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdwkvcrk5072l"]
+[gd_scene load_steps=3 format=3 uid="uid://bdwkvcrk5072l"]
 
 [ext_resource type="Script" uid="uid://d3aiaysfilvjq" path="res://Assets/Message_app/text_scenes/text_message_template.gd" id="1_32yj1"]
+[ext_resource type="Script" uid="uid://dirqlq6671uqe" path="res://Assets/Message_app/text_scenes/margin_container.gd" id="2_32yj1"]
 
 [node name="Control" type="Control"]
 custom_minimum_size = Vector2(50, 55)
@@ -29,29 +30,22 @@ custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="message" type="Label" parent="VBoxContainer/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 7
-text = "Publix #1061 ATLANTA GA -40.82
-	Zelle payment from COLLIN ABBONDI +100
-	ABBONDI’S DINER #05008 ATLANTA GA -37.42
-	BARNES & NOBLE #1061 ATLANTA GA - 20.59
-	EMORY DINING DANCING GOAT ATLANTA GA -3.43"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 1
-text_overrun_behavior = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TextureRect"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 0
+script = ExtResource("2_32yj1")
+
+[node name="message" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer"]
+layout_mode = 2
 text = "Hey I'm Ruby Jacobski. I hate you..."
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+vertical_alignment = 1
 
 [node name="time" type="Label" parent="VBoxContainer"]
 layout_mode = 2

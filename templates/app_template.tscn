@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_fg8cl"]
 [ext_resource type="Script" uid="uid://dphm87ruqnhxi" path="res://Assets/Watch_UI/app_template.gd" id="2_ylwqg"]
 [ext_resource type="Texture2D" uid="uid://bu3fgd2u4rhf7" path="res://Art/img/contact_icon.png" id="3_eaapg"]
-[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://audio/SFX/backBtnSound.wav" id="4_sikuj"]
+[ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://Audio/SFX/backBtnSound.wav" id="4_sikuj"]
 
 [node name="App" type="Button"]
 custom_minimum_size = Vector2(190, 80)

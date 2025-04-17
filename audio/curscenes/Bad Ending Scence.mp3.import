@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://chfvxdwxc8t1m"
-path="res://.godot/imported/Bad Ending Scence.mp3-d26b04d470927b4f95631597601d1a65.mp3str"
+path="res://.godot/imported/Bad Ending Scence.mp3-5118680d1f0ee232abbdd6d25b1f2341.mp3str"
 
 [deps]
 
-source_file="res://audio/curscenes/Bad Ending Scence.mp3"
-dest_files=["res://.godot/imported/Bad Ending Scence.mp3-d26b04d470927b4f95631597601d1a65.mp3str"]
+source_file="res://Audio/curscenes/Bad Ending Scence.mp3"
+dest_files=["res://.godot/imported/Bad Ending Scence.mp3-5118680d1f0ee232abbdd6d25b1f2341.mp3str"]
 
 [params]
 

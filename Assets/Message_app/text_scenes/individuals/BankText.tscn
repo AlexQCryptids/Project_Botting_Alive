@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b85vtquo5mkt1"]
 
-[ext_resource type="Script" uid="uid://clc2vkejdeq26" path="res://Assets/Message_app/text_scenes/bank_text.gd" id="1_84fl3"]
-[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_y5dhf"]
+[ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_3dyap"]
+[ext_resource type="Script" uid="uid://clc2vkejdeq26" path="res://Assets/Message_app/text_scenes/individuals/bank_text.gd" id="2_snvj1"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3
@@ -11,8 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-theme = ExtResource("1_y5dhf")
-script = ExtResource("1_84fl3")
+theme = ExtResource("1_3dyap")
+script = ExtResource("2_snvj1")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
