@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp03sl7k5jiu6" path="res://Assets/Dialing_app/call_screen.gd" id="1_k5i6n"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="2_6uo7t"]
-[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://audio/SFX/clickSound.wav" id="3_bkvj5"]
+[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://Audio/SFX/clickSound.wav" id="3_bkvj5"]
 [ext_resource type="Texture2D" uid="uid://b5mjt7w288ln3" path="res://Art/button_icons/btn1.png" id="4_4sjfu"]
 [ext_resource type="Texture2D" uid="uid://crvmlp6jtmkpl" path="res://Art/button_icons/btn2.png" id="5_g1tax"]
 [ext_resource type="Texture2D" uid="uid://bqgyn7c2y05t" path="res://Art/button_icons/btn3.png" id="6_wjuwc"]
