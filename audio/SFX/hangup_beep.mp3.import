@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://br76rdgq0u3uf"
-path="res://.godot/imported/hangup_beep.mp3-2afa50944514c751430357781e6ccabf.mp3str"
+path="res://.godot/imported/hangup_beep.mp3-5ccb4100d6e290864fe652df40e69c20.mp3str"
 
 [deps]
 
-source_file="res://audio/SFX/hangup_beep.mp3"
-dest_files=["res://.godot/imported/hangup_beep.mp3-2afa50944514c751430357781e6ccabf.mp3str"]
+source_file="res://Audio/SFX/hangup_beep.mp3"
+dest_files=["res://.godot/imported/hangup_beep.mp3-5ccb4100d6e290864fe652df40e69c20.mp3str"]
 
 [params]
 
