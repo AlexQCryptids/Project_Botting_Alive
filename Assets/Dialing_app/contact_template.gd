@@ -40,4 +40,5 @@ func _on_pressed() -> void:
 	else:
 		Dialing_Global.set_no_caller(contact_sequence)
 	Dialing_Global.set_current_call_transition_name(cont_name)
+	Dialing_Global.from_contacts = true # if the you make the phone call from contacts
 	Global.swap_scene("res://Assets/Dialing_app/watch_screen_contacts.tscn","res://Assets/Dialing_app/watch_screen_calling.tscn")

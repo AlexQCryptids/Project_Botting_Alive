@@ -43,5 +43,9 @@ func _on_button_pressed_dial(value):
 func _on_button_hang_pressed() -> void:
 	beep_player.play()
 	Dialing_Global.reset_current_call() 
-	# well change it
-	Global.change_scene("res://Assets/Dialing_app/watch_screen_dialing.tscn")
+	
+	if Dialing_Global.from_contacts == true:
+		Global.change_scene("res://Assets/Dialing_app/watch_screen_contacts.tscn")
+		Dialing_Global.from_contacts = false
+	else:
+		Global.change_scene("res://Assets/Dialing_app/watch_screen_dialing.tscn")

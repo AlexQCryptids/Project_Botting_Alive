@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bp03sl7k5jiu6" path="res://Assets/Dialing_app/call_screen.gd" id="1_8em1u"]
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="2_jbuk2"]
-[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://audio/SFX/clickSound.wav" id="3_uk8xe"]
+[ext_resource type="AudioStream" uid="uid://c00xjqpy4cbyk" path="res://Audio/SFX/clickSound.wav" id="3_uk8xe"]
 
 [node name="Screen" type="Control"]
 layout_mode = 3

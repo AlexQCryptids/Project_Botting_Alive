@@ -8,6 +8,7 @@ var all_bots = {"0":"res://Assets/Bots/unavailable_bot.tscn",
 var cur_num = ""
 var cur_num_seq = []
 var cur_calling_transition_name = ""
+var from_contacts = false
 
 func set_current_call(num_str:String,num_seq:Array):
 	cur_num = num_str
