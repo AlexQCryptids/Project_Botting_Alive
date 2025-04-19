@@ -24,7 +24,7 @@ func _ready() -> void:
 		var image = images[i]
 		var child = TextureRect.new()
 		child.texture = image
-		child.custom_minimum_size = Vector2(100,100)
+		child.custom_minimum_size = Vector2(200,200)
 		child.connect("mouse_entered",_on_mouse_entered.bind(image,i))
 		child.connect("mouse_exited",_on_mouse_exited)
 		$ScrollContainer/GridContainer.add_child(child)
