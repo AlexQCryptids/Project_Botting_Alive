@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c1ymm4m7ayai4"
-path="res://.godot/imported/wait.mp3-a05310ebd747250107d109d68ed1f6b5.mp3str"
+path="res://.godot/imported/wait.mp3-03b6737c13a8d6c26bf568c294ec6039.mp3str"
 
 [deps]
 
-source_file="res://Audio/BankBot/wait.mp3"
-dest_files=["res://.godot/imported/wait.mp3-a05310ebd747250107d109d68ed1f6b5.mp3str"]
+source_file="res://audio/BankBot/wait.mp3"
+dest_files=["res://.godot/imported/wait.mp3-03b6737c13a8d6c26bf568c294ec6039.mp3str"]
 
 [params]
 
