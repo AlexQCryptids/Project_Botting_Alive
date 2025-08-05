@@ -15,7 +15,6 @@ size_flags_vertical = 3
 script = ExtResource("1_wxhom")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,6 +33,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 40
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.388
@@ -48,6 +48,7 @@ texture = ExtResource("2_pa6um")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.386
@@ -62,6 +63,7 @@ texture = ExtResource("3_ss1d5")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.676
@@ -75,6 +77,7 @@ offset_bottom = 11.68
 text = "03/02/2025"
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.677

@@ -39,6 +39,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 5
 
 [node name="Mom" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+visible = false
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
@@ -47,6 +48,7 @@ cont_name = "Mom"
 number = "6462023320"
 
 [node name="Collin" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+visible = false
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
@@ -65,6 +67,7 @@ callable = true
 contact_img = ExtResource("4_hrxo3")
 
 [node name="Beth" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+visible = false
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
@@ -83,6 +86,7 @@ callable = true
 contact_img = ExtResource("5_t5coa")
 
 [node name="Dad" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+visible = false
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1
@@ -100,6 +104,7 @@ number = "5252452782"
 contact_img = ExtResource("6_eh0en")
 
 [node name="Hospital" parent="ContactsContainer/VBoxContainer" instance=ExtResource("3_gxaie")]
+visible = false
 custom_minimum_size = Vector2(300, 75)
 layout_mode = 2
 size_flags_horizontal = 1

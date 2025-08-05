@@ -36,10 +36,10 @@ func play_audio(file_path):
 	if audio_stream:
 		stream = audio_stream
 		play()
-		can_proceed = false
+		can_proceed = true
 		
 func hangup(scene="res://game_scenes/watch_screen_dialing.tscn"):
-	play_audio("res://audio/SFX/button_beep.wav")
+	play_audio("res://Audio/SFX/button_beep.wav")
 	await finished
 	Global.change_scene(scene)
 	

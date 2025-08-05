@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dnm4hropusdvo"]
+[gd_scene load_steps=18 format=3 uid="uid://dnm4hropusdvo"]
 
 [ext_resource type="Script" uid="uid://dsj78wq7savqf" path="res://Assets/Watch_UI/main_game.gd" id="1_3aurv"]
 [ext_resource type="Texture2D" uid="uid://dd7cqi0bty0vf" path="res://Art/img/arm2.png" id="3_5kjjl"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bp50lh41ds5bn" path="res://Art/img/light1.png" id="10_3tfo2"]
 [ext_resource type="Texture2D" uid="uid://cechuc3vah84v" path="res://Art/img/watch_knob.png" id="10_rfeen"]
 [ext_resource type="AudioStream" uid="uid://cyytgar4i50tw" path="res://Audio/SFX/backBtnSound.wav" id="11_v11kl"]
+[ext_resource type="Texture2D" uid="uid://cdjoqabeba72w" path="res://Art/BrokenHeart.png" id="13_03ug6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlg0"]
 bg_color = Color(0, 0, 0, 1)
@@ -44,6 +45,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_imwmw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
 
 [node name="Hand" type="TextureRect" parent="."]
 visible = false
@@ -198,6 +202,7 @@ offset_bottom = 397.0
 text = "press the side button to go back"
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.465
@@ -212,6 +217,17 @@ theme = SubResource("Theme_03ug6")
 text = "Due to technical issues, when calling, plz press buttons only after you finish the audio. 
 (we WILL fix that)"
 horizontal_alignment = 1
+
+[node name="Broken" type="TextureRect" parent="."]
+modulate = Color(1, 0.99, 0.99, 0.239216)
+layout_mode = 0
+offset_left = 423.0
+offset_top = 111.0
+offset_right = 1318.0
+offset_bottom = 992.0
+mouse_filter = 2
+texture = ExtResource("13_03ug6")
+expand_mode = 1
 
 [connection signal="pressed" from="WatchOverlay/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="timeout" from="Timers/MinTimer" to="Timers" method="_on_min_timer_timeout"]

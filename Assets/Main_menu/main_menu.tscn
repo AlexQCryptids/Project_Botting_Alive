@@ -1,25 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://gigljbrx6307"]
+[gd_scene load_steps=16 format=3 uid="uid://gigljbrx6307"]
 
 [ext_resource type="Theme" uid="uid://7xe3ua6la8hr" path="res://new_theme.tres" id="1_wyvxh"]
 [ext_resource type="Script" uid="uid://o7v158wwbbsc" path="res://Assets/Main_menu/main_menu.gd" id="2_cpnpp"]
 [ext_resource type="Texture2D" uid="uid://cfd33wkkt7lng" path="res://Art/incoming_call_temp.png" id="3_k4p0e"]
+[ext_resource type="Script" uid="uid://bpqflvoe7iqbc" path="res://Assets/Main_menu/text.gd" id="3_mspvd"]
 [ext_resource type="AudioStream" uid="uid://c2vaw5fgrfk0k" path="res://Audio/Themes/allora3-1-25.mp3" id="4_pywk0"]
+[ext_resource type="Texture2D" uid="uid://csymbim4ugqpk" path="res://Art/img/B.A_Transparent.png" id="5_7xfmc"]
+[ext_resource type="FontFile" uid="uid://dyc8bwj4qe83n" path="res://Art/depixel_font/depixelhalbfett.woff2" id="5_i2j22"]
+[ext_resource type="Script" uid="uid://b6p4cu552axt" path="res://Assets/Main_menu/button.gd" id="8_awfhm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mspvd"]
+font_size = 22
+font_color = Color(0.52663, 0, 0.00936398, 1)
 
 [sub_resource type="Animation" id="Animation_vt5fv"]
 length = 1.5
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("text:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.5),
-"transitions": PackedFloat32Array(0.435275, 1, 2.14355),
-"update": 0,
-"values": [Vector2(512, 550), Vector2(512, 570), Vector2(512, 550)]
-}
 
 [sub_resource type="Animation" id="Animation_y4eg7"]
 resource_name = "float"
@@ -43,24 +39,26 @@ _data = {
 &"float": SubResource("Animation_y4eg7")
 }
 
-[sub_resource type="FontVariation" id="FontVariation_k4p0e"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_7xfmc"]
-font = SubResource("FontVariation_k4p0e")
-font_size = 91
-font_color = Color(0.619021, 0, 0.00257827, 1)
+font = ExtResource("5_i2j22")
+font_size = 73
+font_color = Color(0.423138, 2.19597e-06, 0.00113225, 1)
 outline_size = 2
 outline_color = Color(0.26, 0.00519999, 0.00519999, 1)
+
+[sub_resource type="Theme" id="Theme_awfhm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_awfhm"]
+font_size = 18
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchor_left = 0.026
 anchor_right = 1.668
 anchor_bottom = 1.658
-offset_left = -47.92
-offset_top = -7.0
-offset_right = -171.56
-offset_bottom = -97.6401
+offset_left = -46.92
+offset_right = -170.56
+offset_bottom = -90.6401
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_wyvxh")
@@ -70,14 +68,14 @@ script = ExtResource("2_cpnpp")
 z_index = 3
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.521
-anchor_top = 0.419
-anchor_right = 0.521
-anchor_bottom = 0.419
-offset_left = -1066.11
-offset_top = -162.3
-offset_right = -802.104
-offset_bottom = -83.2995
+anchor_left = 0.115
+anchor_top = 0.657
+anchor_right = 0.115
+anchor_bottom = 0.657
+offset_left = -102.335
+offset_top = -157.9
+offset_right = 103.665
+offset_bottom = -105.9
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_wyvxh")
@@ -86,18 +84,20 @@ theme_override_colors/font_color = Color(0.572549, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.0941176)
 theme_override_constants/shadow_offset_y = 4
 theme_override_font_sizes/font_size = 15
-text = "click to play"
+text = "click to recall"
+label_settings = SubResource("LabelSettings_mspvd")
 horizontal_alignment = 1
+script = ExtResource("3_mspvd")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.407
 anchor_bottom = 1.412
-offset_left = 32.0
-offset_top = 14.0
-offset_right = -3196.8
-offset_bottom = -1393.4
+offset_left = 47.0
+offset_top = 72.0
+offset_right = -3181.8
+offset_bottom = -1335.4
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_k4p0e")
@@ -117,14 +117,43 @@ parameters/looping = false
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.498
-anchor_top = 0.251
-anchor_right = 0.498
-anchor_bottom = 0.251
-offset_left = -259.442
-offset_top = -58.7
-offset_right = 162.558
-offset_bottom = 38.3
+anchor_left = 0.461
+anchor_top = 0.521
+anchor_right = 0.461
+anchor_bottom = 0.521
+offset_left = -414.369
+offset_top = -116.7
+offset_right = 527.631
+offset_bottom = 20.3
 text = "Botting Alive"
 label_settings = SubResource("LabelSettings_7xfmc")
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1137.0
+offset_top = 170.0
+offset_right = 1717.0
+offset_bottom = 740.0
+texture = ExtResource("5_7xfmc")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+offset_left = 249.0
+offset_top = 772.0
+offset_right = 426.0
+offset_bottom = 948.0
+theme = SubResource("Theme_awfhm")
+script = ExtResource("8_awfhm")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 1000.0
+offset_right = 1691.0
+offset_bottom = 1032.0
+text = "Theme song, Allora, by Aiden Maxwell"
+label_settings = SubResource("LabelSettings_awfhm")

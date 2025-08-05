@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ba145u0rinaq7"]
+[gd_scene load_steps=20 format=3 uid="uid://ba145u0rinaq7"]
 
 [ext_resource type="Script" uid="uid://nbhld05u8meu" path="res://Assets/Cut_scenes/Good_Ending1/gooding_ending_1.gd" id="1_6nj8q"]
 [ext_resource type="Texture2D" uid="uid://uwohb4xg86qi" path="res://Assets/Cut_scenes/Good_Ending1/GE1_rsc/GE_panel1.png" id="1_dmfxp"]
@@ -120,6 +120,66 @@ tracks/8/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 6.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6.48472, 13.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label5:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 13.5667, 24.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Label6:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 24.7, 34.3333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label7:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 34.5667, 37.3333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
 
 [sub_resource type="Animation" id="Animation_old4m"]
 length = 0.001
@@ -231,6 +291,66 @@ tracks/8/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label5:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Label6:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label7:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qxg5a"]
 _data = {
@@ -250,6 +370,18 @@ default_font_size = 69
 default_font = SubResource("SystemFont_4viyt")
 default_font_size = 56
 
+[sub_resource type="LabelSettings" id="LabelSettings_mgj3r"]
+font_size = 46
+
+[sub_resource type="LabelSettings" id="LabelSettings_j6x8m"]
+font_size = 41
+
+[sub_resource type="LabelSettings" id="LabelSettings_2g1v0"]
+font_size = 38
+
+[sub_resource type="LabelSettings" id="LabelSettings_4viyt"]
+font_size = 45
+
 [node name="GoodingEnding1" type="Node2D"]
 script = ExtResource("1_6nj8q")
 
@@ -260,7 +392,7 @@ libraries = {
 autoplay = "GE1"
 
 [node name="panel1" type="Sprite2D" parent="."]
-position = Vector2(985, 532)
+position = Vector2(969, 532)
 texture = ExtResource("1_dmfxp")
 
 [node name="panel2" type="Sprite2D" parent="."]
@@ -310,3 +442,59 @@ visible = false
 position = Vector2(921, 824)
 scale = Vector2(0.168701, 0.153906)
 texture = ExtResource("8_mgj3r")
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 300.0
+offset_top = 950.0
+offset_right = 1626.0
+offset_bottom = 1130.0
+text = "Story & Plots    Alex Wang, Adna Cufurovic, Christabel Segun
+"
+label_settings = SubResource("LabelSettings_mgj3r")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_top = -1.0
+offset_right = 419.0
+offset_bottom = 179.0
+text = "Botting Alive
+a VGDev Game
+Directed by Alex Q."
+label_settings = SubResource("LabelSettings_mgj3r")
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+offset_top = 800.0
+offset_right = 499.0
+offset_bottom = 1037.0
+text = "Voice Acting    
+Callie     Jennefer Bennett
+Beth      Adna Cufurovic
+Collin     Aiden Maxwell"
+label_settings = SubResource("LabelSettings_j6x8m")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+offset_top = 800.0
+offset_right = 559.0
+offset_bottom = 1083.0
+text = "Programmed by:
+Christbel Segun
+Alex Wang
+Akshal Dhal
+Aiden Maxwell"
+label_settings = SubResource("LabelSettings_2g1v0")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 33.0
+offset_top = 3.0
+offset_right = 621.0
+offset_bottom = 162.0
+text = "2D Art      Adna Cufurovic
+Music & SFX   Jennefer Bennett
+UI Design     
+Christabel Segun ,Nicholas Suh"
+label_settings = SubResource("LabelSettings_4viyt")
+horizontal_alignment = 1

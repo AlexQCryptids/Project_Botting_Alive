@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://dulgn1ovs1b38"]
+[gd_scene load_steps=12 format=3 uid="uid://dulgn1ovs1b38"]
 
+[ext_resource type="Script" uid="uid://dc7imy0mwafg1" path="res://Assets/Cut_scenes/Post_Credit1/post_credit_1.gd" id="1_jlpdl"]
 [ext_resource type="AudioStream" uid="uid://bn8xdsfacxvjm" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/Dedecus Mixed v2.mp3" id="1_sg2em"]
 [ext_resource type="Texture2D" uid="uid://ca7b4bqab62hj" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/blackout.png" id="2_6no38"]
 [ext_resource type="Texture2D" uid="uid://chp48bg5r6wgr" path="res://Assets/Cut_scenes/Post_Credit1/PC1_rsc/dvmHh4.png" id="3_6no38"]
@@ -32,7 +33,7 @@ tracks/1/path = NodePath("1:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0396006, 2.56667, 4.96667),
+"times": PackedFloat32Array(0, 2.56667, 4.96667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -44,7 +45,7 @@ tracks/2/path = NodePath("2:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.0396006, 5, 9.16667),
+"times": PackedFloat32Array(0, 5, 9.16667),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -56,7 +57,7 @@ tracks/3/path = NodePath("3:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.0396006, 9.2, 11.3333),
+"times": PackedFloat32Array(0, 9.2, 11.3333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -68,7 +69,7 @@ tracks/4/path = NodePath("4:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.0396006, 11.4333, 14.53, 36.5784),
+"times": PackedFloat32Array(0, 11.4333, 14.53, 36.5784),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, false]
@@ -80,7 +81,7 @@ tracks/5/path = NodePath("5:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.0396006, 14.53, 18.8333, 48.1572),
+"times": PackedFloat32Array(0, 14.53, 18.8333, 48.1572),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, false]
@@ -92,7 +93,7 @@ tracks/6/path = NodePath("6:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.0396006, 18.7811, 24.5383),
+"times": PackedFloat32Array(0, 18.7811, 24.5383),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -104,7 +105,7 @@ tracks/7/path = NodePath("7:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.0296006, 24.5383, 33.2041),
+"times": PackedFloat32Array(0, 24.5383, 33.2041),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
@@ -116,7 +117,7 @@ tracks/8/path = NodePath("8:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0.0296006, 33.2041),
+"times": PackedFloat32Array(0, 33.2041),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -246,6 +247,7 @@ font_weight = 525
 default_font = SubResource("SystemFont_0x7h0")
 
 [node name="PostCredit1" type="Node2D"]
+script = ExtResource("1_jlpdl")
 
 [node name="6" type="Label" parent="."]
 offset_left = 21.0
@@ -265,7 +267,7 @@ offset_top = 380.0
 offset_right = 1921.0
 offset_bottom = 882.0
 text = "Voice Acting    
-Callie     Jennefer (Jenn) Bennett
+Callie     Jennefer Bennett
 Beth     Adna Cufurovic
 Collin     Aiden Maxwell
 Kelvin     Alex Wang"
@@ -280,7 +282,7 @@ offset_right = 1901.0
 offset_bottom = 816.0
 text = "Thanks for playing our game!!!
 
-Wanna try again to get our protag out of the coffin?"
+Wanna try again to get our *protag* out of the coffin?"
 label_settings = SubResource("LabelSettings_dimpg")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -306,7 +308,7 @@ offset_right = 1204.0
 offset_bottom = 819.0
 text = "Programmed by:
 Christbel Segun
-Alex Q. Wang
+Alex Wang
 Akshal Dhal
 Aiden Maxwell"
 label_settings = SubResource("LabelSettings_dimpg")
@@ -329,7 +331,7 @@ offset_left = 447.0
 offset_top = 420.0
 offset_right = 1550.0
 offset_bottom = 699.0
-text = "Directed and edited By Alex Q. Yang"
+text = "Directed by Alex Q. "
 label_settings = SubResource("LabelSettings_dimpg")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -339,7 +341,7 @@ offset_left = 456.0
 offset_top = 422.0
 offset_right = 1462.0
 offset_bottom = 701.0
-text = "A Story about Callie and Beth"
+text = "a Story about Callie and Beth"
 label_settings = SubResource("LabelSettings_dimpg")
 horizontal_alignment = 1
 vertical_alignment = 1

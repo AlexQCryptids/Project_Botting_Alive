@@ -22,6 +22,10 @@ Global="*res://Autoload_scripts/Global.gd"
 Unlockable="*res://Autoload_scripts/Unlockable.gd"
 Dialing_Global="*res://Autoload_scripts/Dialing_Global.gd"
 
+[debug]
+
+file_logging/enable_file_logging=true
+
 [display]
 
 window/size/viewport_width=1920

@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AudioStreamPlayer_ringtone.play()
@@ -27,12 +26,18 @@ func _process(_delta: float) -> void:
 func _on_accept_call_pressed() -> void:
 	$Button.disabled = true
 	$AudioStreamPlayer_ringtone.stop()
-	$AudioStreamPlayer.play()
+	$AudioStreamPlayer.stream = load("res://Assets/Incoming_Call/Kelvin/Kelvin_rsc/kelvin_call.mp3")
+	$AudioStreamPlayer.play(5.5)
 	await $AudioStreamPlayer.finished
 	$AudioStreamPlayer2.play()
+	#$AudioStreamPlayer2.seek(11.0) 
 	await $AudioStreamPlayer2.finished
-
+	
+	get_tree().get_root().get_node("MainScreen/AudioStreamPlayer").stream = load("res://Audio/Themes/ambience.mp3")
+	get_tree().get_root().get_node("MainScreen/AudioStreamPlayer").play()
 	Global.swap_scene("res://Assets/Incoming_Call/Kelvin.tscn","res://Assets/Watch_UI/watch_screen_login.tscn")
+
+
 
 
 func _on_button_2_pressed() -> void:
@@ -40,5 +45,8 @@ func _on_button_2_pressed() -> void:
 	$AudioStreamPlayer.stop()
 	$AudioStreamPlayer2.play()
 	await $AudioStreamPlayer2.finished
-
+	
+	get_tree().get_root().get_node("MainScreen/AudioStreamPlayer").stream = load("res://Audio/Themes/ambience.mp3")
+	get_tree().get_root().get_node("MainScreen/AudioStreamPlayer").play()
 	Global.swap_scene("res://Assets/Incoming_Call/Kelvin.tscn","res://Assets/Watch_UI/watch_screen_login.tscn")
+	

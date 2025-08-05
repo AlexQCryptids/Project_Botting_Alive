@@ -12,8 +12,6 @@ func _ready() -> void:
 	add_text("7:16 pm", false,  "just make it not that obvious.. stop using your birthday as password")
 	add_text("7:16 pm", false,  "people are shitholes these days")
 	add_text("7:20 pm", true,  "fine, fine mom")
-	add_text("7:24 pm", false,  "and don't use cell phone number as password")
-	add_text("7:24 pm", false,  "your 5150054 is just dumb")
 	
 	
 	
@@ -32,11 +30,7 @@ func _ready() -> void:
 	add_text("8:16 pm", false, "I want it to be a surprise for tomorrow’s dinner.")
 	
 	add_text("8:16 pm", true,  "Of course! can’t wait to see your reaction")
-	
 	add_text("8:16 pm", false, "need Collin to pick you up?")
-	
 	add_text("8:16 pm", true,  "Mom I can drive! I got my driver license just a month ago!")
-	
 	add_text("8:16 pm", false, "Just be safe Cal (love emoji)")
-	
 	add_text("8:16 pm", true,  "I will! I’ll see you at 7!!! Love u mom!")

@@ -14,5 +14,6 @@ func _ready() -> void:
 	add_text("9:06 am", false, "u good?")
 	add_text("9:06 am", false, "bruh i’ll call u rn")
 	add_text("9:07 am", false, "ehhh waht's ur number again?")
-	add_text("9:07 am", false, "the 646 one?")
-	add_text("9:07 am", false, "found it lol")
+	add_text("9:07 am", false, "the 6465150054 one?")
+	#add_text("9:09 am", false, "it doesn't work")
+	#add_text("9:12 am", false, "found it lol")

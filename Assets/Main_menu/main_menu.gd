@@ -11,6 +11,7 @@ func _ready() -> void:
 
 
 # click to play the game
+'''
 func _input(event: InputEvent) -> void:
 	if can_accept_input == true:
 		if event is InputEventKey:
@@ -19,3 +20,4 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventMouseButton:
 			#animation_player.play("fade_out")
 			get_tree().change_scene_to_file("res://Assets/Cut_scenes/opening/test_OP.tscn")
+'''
