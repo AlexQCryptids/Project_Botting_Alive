@@ -34,7 +34,7 @@ Christbel Segun, Alex Wang, Akshal Dhal, Aiden Maxwell
 
 Adna Cufurovic
 
-**Music & SFX   **
+**Music & SFX**
 
 Jennefer Bennett, Aiden Maxwell
 
@@ -42,11 +42,11 @@ Jennefer Bennett, Aiden Maxwell
 
 Alex Wang, Adna Cufurovic, Christabel Segun
 
-**UI Design  ** 
+**UI Design** 
 
 Christabel Segun, Nicholas Suh
 
-**Voice Acting  **
+**Voice Acting**
 
 Jennefer Bennett (Callie), Adna Cufurovic (Beth), Aiden Maxwell (Collin), Alex Wang (Kelvin)
 
@@ -54,6 +54,6 @@ Jennefer Bennett (Callie), Adna Cufurovic (Beth), Aiden Maxwell (Collin), Alex W
 
 
 
+<br>
 
-
-Notes by Alex: I'm developing a new game with working title B.A. with a similar idea but a better story and gameplay. Stay tuned!
+*Notes by Alex: I'm developing a new game with working title B.A. with a similar idea but a better story and gameplay. Stay tuned!*
